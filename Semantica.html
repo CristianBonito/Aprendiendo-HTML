@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semántica</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Semántica en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+    <main>
+      
+      <section id="que-es-semantica">
+        <h2>Semántica en HTML: Uso de Etiquetas Significativas</h2>
+          <h3>¿Qué es la semántica en HTML?</h3>
+          <p>La semántica en HTML se refiere al uso de etiquetas que transmiten un significado claro y específico,
+              ayudando a describir el contenido de la página de manera efectiva. Utilizar etiquetas semánticas no solo
+              mejora la accesibilidad, sino que también optimiza el contenido para motores de búsqueda (<code>SEO</code>),
+              ya que proporciona un contexto y una estructura clara que los sistemas de indexación pueden comprender.</p>
+      </section>
+  
+      <section id="importancia-semantica">
+          <h3>Importancia de la semántica</h3>
+          <ul>
+              <li><strong>Mejora la accesibilidad:</strong> Las etiquetas semánticas permiten a los lectores de pantalla y
+                  otras tecnologías asistivas interpretar la estructura y el propósito del contenido de manera más
+                  precisa. Esto beneficia a usuarios con discapacidades, facilitando la navegación y comprensión del
+                  sitio.</li>
+              <li><strong>SEO optimizado:</strong> Los motores de búsqueda analizan la semántica para indexar y clasificar
+                  páginas. El uso de etiquetas adecuadas puede resultar en una mejor visibilidad en los resultados de
+                  búsqueda, lo que incrementa el tráfico hacia tu sitio.</li>
+              <li><strong>Mantenibilidad del código:</strong> Utilizar etiquetas semánticas hace que el código sea más
+                  legible y comprensible. Esto simplifica el mantenimiento y la actualización del sitio, permitiendo a
+                  otros desarrolladores o a ti mismo trabajar con mayor eficiencia.</li>
+          </ul>
+      </section>
+  
+      <section id="etiquetas-semanticas">
+          <h3>Etiquetas semánticas en HTML5</h3>
+  
+          <article id="header">
+              <h4>&lt;header&gt;</h4>
+              <p>Define la cabecera de un documento o sección. Generalmente contiene elementos de navegación, títulos y otros
+                  elementos introductorios.</p>
+              <h4>Ejemplo:</h4>
+              <pre><code>&lt;header&gt;
+        &lt;h1&gt;Título del sitio&lt;/h1&gt;
+        &lt;nav&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      &lt;/header&gt;</code></pre>
+          </article>
+  
+          <article id="nav">
+              <h4>&lt;nav&gt;</h4>
+              <p>Utilizada para contener enlaces de navegación. Ayuda a los motores de búsqueda y a los lectores de pantalla a
+                  identificar la sección de navegación del sitio.</p>
+              <h4>Ejemplo:</h4>
+              <pre><code>&lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;</code></pre>
+          </article>
+  
+          <article id="main">
+              <h4>&lt;main&gt;</h4>
+              <p>Representa el contenido principal del documento. Solo debe haber un elemento <code>&lt;main&gt;</code> por
+                  página y debe contener contenido directamente relevante al tema principal.</p>
+              <h4>Ejemplo:</h4>
+              <pre><code>&lt;main&gt;
+        &lt;article&gt;
+          &lt;h2&gt;Título del artículo&lt;/h2&gt;
+          &lt;p&gt;Este es el contenido principal del artículo.&lt;/p&gt;
+        &lt;/article&gt;
+      &lt;/main&gt;</code></pre>
+          </article>
+  
+          <article id="article">
+              <h4>&lt;article&gt;</h4>
+              <p>Define un contenido independiente que puede ser distribuido o reutilizado. Puede incluir títulos, párrafos,
+                  imágenes, etc.</p>
+              <h4>Ejemplo:</h4>
+              <pre><code>&lt;article&gt;
+        &lt;h2&gt;Artículo sobre la Tecnología&lt;/h2&gt;
+        &lt;p&gt;La tecnología avanza a pasos agigantados en nuestra sociedad.&lt;/p&gt;
+      &lt;/article&gt;</code></pre>
+          </article>
+  
+          <article id="section">
+              <h4>&lt;section&gt;</h4>
+              <p>Agrupa contenido temáticamente relacionado. Normalmente incluye un título y puede contener otros elementos
+                  semánticos como artículos o encabezados.</p>
+              <h4>Ejemplo:</h4>
+              <pre><code>&lt;section&gt;
+        &lt;h2&gt;Sección de Noticias&lt;/h2&gt;
+        &lt;article&gt;
+          &lt;h3&gt;Título de la noticia&lt;/h3&gt;
+          &lt;p&gt;Resumen de la noticia.&lt;/p&gt;
+        &lt;/article&gt;
+      &lt;/section&gt;</code></pre>
+          </article>
+  
+          <article id="aside">
+              <h4>&lt;aside&gt;</h4>
+              <p>Define contenido que está relacionado de manera tangencial con el contenido principal. Se usa para notas al
+                  margen, citas o información adicional.</p>
+              <h4>Ejemplo:</h4>
+              <pre><code>&lt;aside&gt;
+        &lt;h4&gt;Información adicional&lt;/h4&gt;
+        &lt;p&gt;Este es un dato interesante sobre el tema tratado.&lt;/p&gt;
+      &lt;/aside&gt;</code></pre>
+          </article>
+  
+          <article id="footer">
+              <h4>&lt;footer&gt;</h4>
+              <p>Define el pie de página de un documento o sección. Puede contener información de contacto, derechos de autor,
+                  enlaces relacionados, etc.</p>
+              <h4>Ejemplo:</h4>
+              <pre><code>&lt;footer&gt;
+        &lt;p&gt;&copy; 2024 Mi Sitio Web. Todos los derechos reservados.&lt;/p&gt;
+      &lt;/footer&gt;</code></pre>
+          </article>
+      </section>
+  
+      <section id="ejemplo-estructura">
+          <h3>Ejemplo de estructura semántica completa</h3>
+          <p>Aquí hay un ejemplo que integra varias de las etiquetas semánticas discutidas, mostrando cómo se pueden
+              utilizar para estructurar un documento HTML de manera efectiva:</p>
+          <pre><code>&lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Ejemplo de Semántica en HTML&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;header&gt;
+          &lt;h1&gt;Título del Sitio&lt;/h1&gt;
+          &lt;nav&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+        &lt;/header&gt;
+        
+        &lt;main&gt;
+          &lt;section&gt;
+            &lt;h2&gt;Sección de Bienvenida&lt;/h2&gt;
+            &lt;p&gt;Bienvenido a nuestro sitio web. Aquí encontrarás información útil.&lt;/p&gt;
+          &lt;/section&gt;
+          
+          &lt;article&gt;
+            &lt;h2&gt;Título del Artículo&lt;/h2&gt;
+            &lt;p&gt;Este es el contenido del artículo principal. Hablamos sobre diversos temas relevantes.&lt;/p&gt;
+          &lt;/article&gt;
+          
+          &lt;aside&gt;
+            &lt;h4&gt;Notas Adicionales&lt;/h4&gt;
+            &lt;p&gt;Información relacionada que puede ser de interés.&lt;/p&gt;
+          &lt;/aside&gt;
+        &lt;/main&gt;
+        
+        &lt;footer&gt;
+          &lt;p&gt;&copy; 2024 Mi Sitio Web. Todos los derechos reservados.&lt;/p&gt;
+        &lt;/footer&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+      </section>
+  
+      <section id="importancia-etiquetas-semanticas">
+        <h2>Importancia de las Etiquetas Semánticas</h2>
+        <p>El uso de etiquetas semánticas es crucial para crear una web accesible, optimizada y mantenible. Las etiquetas semánticas no solo mejoran la estructura y claridad del código HTML, sino que también facilitan la navegación y comprensión del contenido para usuarios con discapacidades. Esto se traduce en una experiencia más inclusiva, ya que las tecnologías de asistencia, como los lectores de pantalla, pueden interpretar y presentar el contenido de manera más efectiva.</p>
+        
+        <p>Además, el uso de etiquetas semánticas impacta positivamente en el SEO (optimización para motores de búsqueda). Los motores de búsqueda utilizan estas etiquetas para comprender el contexto y la relevancia del contenido, lo que puede influir en la clasificación de la página en los resultados de búsqueda. Al emplear etiquetas como <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;header&gt;</code>, se proporciona una jerarquía clara de la información, lo que ayuda a los motores de búsqueda a indexar el contenido de manera más eficiente.</p>
+        
+        <p>Desde el punto de vista de la mantenibilidad, las etiquetas semánticas hacen que el código sea más legible y comprensible, tanto para los desarrolladores como para cualquier persona que necesite realizar modificaciones en el futuro. Esto significa que, al regresar a un proyecto después de un tiempo, es más fácil entender la estructura y el propósito del código, lo que reduce el tiempo y los recursos necesarios para realizar actualizaciones o correcciones.</p>
+        
+        <p>En resumen, utilizar etiquetas semánticas en HTML es fundamental no solo para crear un sitio web más accesible y amigable para los usuarios, sino también para mejorar su visibilidad en línea y facilitar el mantenimiento a largo plazo del código. Este enfoque proactivo en la estructura del contenido contribuye a una web más funcional y eficiente, beneficiando tanto a los desarrolladores como a los usuarios finales.</p>
+    </section>
+    
+    <a href="index.html" class="button-back">Volver al Menú</a>
+
+  </main>
+  
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+</body>
+
+</html>

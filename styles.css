@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #deebf8; /* Color de fondo más claro */
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #005187; /* Color azul oscuro */
+    color: #fcffff; /* Blanco para contraste */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: calc(100% - 210px);
+    margin-left: 210px;
+    box-sizing: border-box;
+}
+
+nav.vertical {
+    background: #4d82bc; /* Color azul medio */
+    color: #fcffff; /* Blanco para el texto */
+    width: 210px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav.vertical a {
+    color: #fcffff; /* Blanco para el texto */
+    text-decoration: none;
+    padding: 15px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+nav.vertical a:hover {
+    background-color: #84b6f4; /* Color azul claro para hover */
+    text-decoration: underline;
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #ffffff; /* Blanco para contraste */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+section section {
+    background-color: #c4dafa; /* Color azul pálido */
+    border: 3px solid #005187; /* Color azul oscuro para borde */
+}
+
+h2, h3, h4 {
+    color: #005187; /* Color azul oscuro para los títulos */
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+
+.button-back {
+    background-color: #005187; /* Color de fondo del botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+strong {
+    color: #005187; /* Color azul oscuro para destacar */
+}
+
+code {
+    background-color: #c4dafa; /* Color azul pálido */
+    color: #005187; /* Azul oscuro para el texto */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+pre {
+    background-color: #c4dafa; /* Color azul pálido */
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    text-align: left;
+}
+
+footer {
+    background-color: #005187; /* Color azul oscuro */
+    color: #fcffff; /* Blanco para el texto */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    nav.vertical {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+}

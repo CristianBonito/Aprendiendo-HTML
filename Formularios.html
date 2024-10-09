@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Formularios en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+    <main>
+        <section id="formularios-html">
+            <h2>Formularios en HTML: Estructura y Validación</h2>
+            <p>Los formularios en HTML son elementos clave para la interacción del usuario en una página web.
+                Permiten a los usuarios enviar información al servidor, como datos de contacto, comentarios,
+                registros, entre otros. Los formularios son fundamentales para recoger datos y facilitar la
+                comunicación entre el usuario y el sitio web.</p>
+        </section>
+
+        <section id="estructura-formulario">
+            <h3>Estructura básica de un formulario</h3>
+            <p>Un formulario en HTML se define mediante la etiqueta <code>&lt;form&gt;</code>. Dentro de esta
+                etiqueta, se pueden incluir varios tipos de elementos que permiten a los usuarios ingresar
+                datos. La estructura básica incluye:</p>
+            <ul>
+                <li><code>&lt;form&gt;</code>: Contenedor principal del formulario.</li>
+                <li><code>&lt;input&gt;</code>: Campo de entrada de datos. Existen varios tipos de entrada.</li>
+                <li><code>&lt;textarea&gt;</code>: Área de texto para entradas más largas.</li>
+                <li><code>&lt;select&gt;</code>: Menú desplegable para seleccionar una opción.</li>
+                <li><code>&lt;button&gt;</code>: Botón para enviar el formulario.</li>
+            </ul>
+
+            <h4>Ejemplo básico de formulario:</h4>
+            <pre><code>&lt;form action=&quot;/submit&quot; method=&quot;post&quot;&gt;
+    &lt;div&gt;
+      &lt;label for=&quot;nombre&quot;&gt;Nombre:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;nombre&quot; name=&quot;nombre&quot; required&gt;
+    &lt;/div&gt;
+                        
+    &lt;div&gt;
+      &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+      &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required&gt;
+    &lt;/div&gt;
+                        
+    &lt;div&gt;
+      &lt;label for=&quot;mensaje&quot;&gt;Mensaje:&lt;/label&gt;
+      &lt;textarea id=&quot;mensaje&quot; name=&quot;mensaje&quot; rows=&quot;4&quot; required&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+                        
+    &lt;div&gt;
+      &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;</code></pre>
+
+            <br>
+            <p><strong>Salida:</strong></p>
+            
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+        
+        </section>
+
+        <section id="elementos-formulario">
+            <h3>Descripción de los elementos del formulario</h3>
+            <h4>1. <code>&lt;form&gt;</code></h4>
+            <p>Atributos comunes:</p>
+            <ul>
+                <li><strong>action</strong>: URL a la que se enviará el formulario.</li>
+                <li><strong>method</strong>: Método HTTP a utilizar, típicamente GET o POST.</li>
+                <li><strong>enctype</strong>: Especifica cómo se envían los datos al servidor. Por ejemplo,
+                    application/x-www-form-urlencoded o multipart/form-data para subir archivos.</li>
+            </ul>
+
+            <h4>2. <code>&lt;input&gt;</code></h4>
+            <p>Tipos de entrada: Los tipos de <code>&lt;input&gt;</code> determinan el tipo de datos que el
+                usuario puede ingresar. Algunos de los tipos más comunes son:</p>
+            <ul>
+                <li><strong>text</strong>: Entrada de texto simple.</li>
+                <li><strong>email</strong>: Campo para direcciones de correo electrónico (realiza validación de
+                    formato).</li>
+                <li><strong>password</strong>: Entrada oculta (para contraseñas).</li>
+                <li><strong>number</strong>: Solo permite números.</li>
+                <li><strong>date</strong>: Selector de fecha.</li>
+                <li><strong>checkbox</strong>: Casilla de verificación.</li>
+                <li><strong>radio</strong>: Botones de opción (selección única).</li>
+            </ul>
+
+            <h4>Ejemplo de diferentes tipos de input:</h4>
+            <pre><code>&lt;input type="text" name="nombre" placeholder="Nombre"&gt;
+    &lt;input type="email" name="email" placeholder="Correo electrónico"&gt;
+    &lt;input type="password" name="contraseña" placeholder="Contraseña"&gt;
+    &lt;input type="checkbox" name="acepto" required&gt; Acepto los términos</code></pre>
+            <br>
+            <p><strong>Salida:</strong></p>
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="email" name="email" placeholder="Correo electrónico">
+            <input type="password" name="contraseña" placeholder="Contraseña">
+            <input type="checkbox" name="acepto" required> Acepto los términos
+            <br>
+            <br>
+            <h4>3. <code>&lt;textarea&gt;</code></h4>
+            <p>Utilizada para entradas de texto más largas. Se puede definir el número de filas y columnas.</p>
+            <pre><code>&lt;textarea name="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aquí..."&gt;&lt;/textarea&gt;</code></pre>
+            <br>
+            <p><strong>Salida:</strong></p>
+            <textarea name="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aquí..."></textarea>
+            <br>
+            <br>
+            <h4>4. <code>&lt;select&gt;</code></h4>
+            <p>Crea un menú desplegable. Se puede incluir múltiples opciones (<code>&lt;option&gt;</code>).</p>
+            <pre><code>&lt;label for="pais"&gt;País:&lt;/label&gt;
+    &lt;select id="pais" name="pais"&gt;
+      &lt;option value="mx"&gt;México&lt;/option&gt;
+      &lt;option value="us"&gt;Estados Unidos&lt;/option&gt;
+      &lt;option value="es"&gt;España&lt;/option&gt;
+    &lt;/select&gt;</code></pre>
+            <br>
+            <p><strong>Salida:</strong></p>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="mx">México</option>
+                <option value="us">Estados Unidos</option>
+                <option value="es">España</option>
+            </select>
+            <br>
+            <br>
+            <h4>5. <code>&lt;button&gt;</code></h4>
+            <p>Botón que puede enviar el formulario o restablecerlo.</p>
+            <pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+        &lt;button type="reset"&gt;Limpiar&lt;/button&gt;</code></pre>
+            <br>
+            <p><strong>Salida:</strong></p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+
+        </section>
+
+        <section id="validacion-formulario">
+            <h3>Validación de formularios</h3>
+            <p>La validación es un aspecto crucial para asegurar que los datos ingresados por los usuarios sean
+                correctos y completos. HTML ofrece varias formas de realizar validación:</p>
+            <br>
+            <h4>1. Validación de atributos</h4>
+            <p>HTML5 introdujo varios atributos que permiten la validación de campos de manera sencilla:</p>
+            <ul>
+                <li><strong>required</strong>: Hace que el campo sea obligatorio.</li>
+                <li><strong>minlength</strong> y <strong>maxlength</strong>: Establecen la longitud mínima y
+                    máxima para campos de texto.</li>
+                <li><strong>pattern</strong>: Permite definir una expresión regular para validar el formato de
+                    entrada.</li>
+            </ul>
+
+            <h4>Ejemplo de validación con atributos:</h4>
+            <pre><code>&lt;input type="text" name="nombre" required minlength="2" maxlength="30" pattern="[A-Za-z ]+" title="Solo letras y espacios permitidos"&gt;</code></pre>
+            <br>
+            <p><strong>Salida:</strong></p>
+            <input type="text" name="nombre" required minlength="2" maxlength="30" pattern="[A-Za-z ]+"
+                title="Solo letras y espacios permitidos">
+            <br>
+            <br>
+            <h4>2. Validación JavaScript</h4>
+            <p>Además de la validación HTML, puedes implementar validación personalizada usando JavaScript. Esto
+                es útil para mostrar mensajes de error más específicos o realizar comprobaciones más complejas.
+            </p>
+            <br>
+            <h4>Ejemplo de validación con JavaScript:</h4>
+            <pre><code>&lt;script&gt;
+    document.querySelector('form').onsubmit = function(event) {
+      const email = document.querySelector('#email').value;
+      if (!email.includes('@')) {
+        alert('Por favor, ingrese un correo electrónico válido.');
+        event.preventDefault(); // Evita el envío del formulario
+       }
+     };
+    &lt;/script&gt;</code></pre>
+        </section>
+
+        <section id="mejores-practicas">
+            <h3>Mejores prácticas para formularios</h3>
+            <ul>
+                <li>Usar etiquetas <code>&lt;label&gt;</code> para mejorar la accesibilidad y la usabilidad. El
+                    atributo <code>for</code> debe coincidir con el <code>id</code> del campo de entrada
+                    correspondiente.</li>
+                <li>Proporcionar mensajes de error claros para guiar al usuario, tanto con validación HTML como
+                    mensajes personalizados en JavaScript.</li>
+                <li>Hacer los formularios responsivos para que funcionen en dispositivos móviles, utilizando
+                    unidades relativas.</li>
+                <li>Minimizar los campos obligatorios para reducir la fricción del usuario. Solo incluir lo
+                    esencial.</li>
+                <li>Realizar pruebas de usabilidad para identificar mejoras y ajustar la experiencia del
+                    usuario.</li>
+                <li>Proporcionar confirmación visual después del envío del formulario, como un mensaje de
+                    agradecimiento.</li>
+            </ul>
+
+            <h3>Ejemplo completo de formulario</h3>
+            <pre><code>&lt;form action=&quot;/submit&quot; method=&quot;post&quot; novalidate&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;nombre&quot;&gt;Nombre:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;nombre&quot; name=&quot;nombre&quot; required minlength=&quot;2&quot; maxlength=&quot;30&quot; pattern=&quot;[A-Za-z ]+&quot; title=&quot;Solo letras y espacios permitidos&quot;&gt;
+    &lt;/div&gt;
+                    
+    &lt;div&gt;
+        &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+        &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required&gt;
+    &lt;/div&gt;
+                    
+    &lt;div&gt;
+        &lt;label for=&quot;pais&quot;&gt;País:&lt;/label&gt;
+        &lt;select id=&quot;pais&quot; name=&quot;pais&quot; required&gt;
+            &lt;option value=&quot;&quot;&gt;Seleccione un país&lt;/option&gt;
+            &lt;option value=&quot;mx&quot;&gt;México&lt;/option&gt;
+            &lt;option value=&quot;us&quot;&gt;Estados Unidos&lt;/option&gt;
+            &lt;option value=&quot;es&quot;&gt;España&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+                    
+    &lt;div&gt;
+        &lt;label for=&quot;mensaje&quot;&gt;Mensaje:&lt;/label&gt;
+        &lt;textarea id=&quot;mensaje&quot; name=&quot;mensaje&quot; rows=&quot;4&quot; required placeholder=&quot;Escribe tu mensaje aquí...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+                    
+    &lt;div&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;acepto&quot; name=&quot;acepto&quot; required&gt; 
+        &lt;label for=&quot;acepto&quot;&gt;Acepto los términos y condiciones.&lt;/label&gt;
+    &lt;/div&gt;
+                    
+    &lt;div&gt;
+        &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+        &lt;button type=&quot;reset&quot;&gt;Limpiar&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+                    
+    &lt;script&gt;
+        document.querySelector(&#39;form&#39;).onsubmit = function(event) {
+            const email = document.querySelector(&#39;#email&#39;).value;
+            if (!email.includes(&#39;@&#39;)) {
+                alert(&#39;Por favor, ingrese un correo electrónico válido.&#39;);
+                vent.preventDefault(); // Evita el envío del formulario
+            }
+        };
+    &lt;/script&gt;</code></pre>
+
+            <br>
+            <p><strong>Salida:</strong></p>
+            <form action="/submit" method="post" novalidate>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="30"
+                        pattern="[A-Za-z ]+" title="Solo letras y espacios permitidos">
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="pais">País:</label>
+                    <select id="pais" name="pais" required>
+                        <option value="">Seleccione un país</option>
+                        <option value="mx">México</option>
+                        <option value="us">Estados Unidos</option>
+                        <option value="es">España</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required
+                        placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">Acepto los términos y condiciones.</label>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
+                </div>
+            </form>
+
+            <script>
+                document.querySelector('form').onsubmit = function (event) {
+                    const email = document.querySelector('#email').value;
+                    if (!email.includes('@')) {
+                        alert('Por favor, ingrese un correo electrónico válido.');
+                        event.preventDefault(); // Evita el envío del formulario
+                    }
+                };
+            </script>
+
+        </section>
+        <section id="importancia">
+            <h2>Formularios en HTML: Estructura y Validación</h2>
+            <p>Los formularios en HTML son una parte integral de la interacción del usuario en la web. Con una
+                estructura
+                clara, elementos adecuados y validación eficaz, puedes crear formularios que no solo recojan datos, sino
+                que
+                también ofrezcan una excelente experiencia al usuario. Al seguir las mejores prácticas y realizar
+                pruebas
+                constantes, podrás optimizar la funcionalidad y accesibilidad de tus formularios, mejorando así la
+                satisfacción del usuario y la eficacia de tu sitio web.
+            </p>
+        </section>
+        
+        <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+    
+</body>
+
+</html>

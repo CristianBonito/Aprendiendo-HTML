@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Errores comunes</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Errores comunes en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+    
+
+
+    <main> 
+        <section id="errores-comunes-html">
+            <h2>Errores Comunes en HTML: Identificación y Solución</h2>
+            <p>El <code>HTML</code> es la base de todas las páginas web, y cometer errores en su uso puede afectar gravemente la accesibilidad, la presentación, el rendimiento y la funcionalidad de un sitio web. Estos errores pueden derivar en una mala experiencia de usuario, impactar negativamente en el <code>SEO</code>, y dificultar el mantenimiento futuro del código. A continuación, se detallan los errores más comunes al trabajar con <code>HTML</code> y las soluciones para corregirlos.</p>
+        </section>
+    
+        <section id="error-etiquetas-semanticas">
+            <h3>1. No utilizar etiquetas semánticas</h3>
+            <h4>Error:</h4>
+            <p>Es habitual que los desarrolladores utilicen etiquetas genéricas como <code>&lt;div&gt;</code> o <code>&lt;span&gt;</code> para organizar el contenido sin considerar el uso de etiquetas semánticas más apropiadas. Esto dificulta la accesibilidad y la indexación en motores de búsqueda, ya que el contenido pierde su significado estructural.</p>
+            
+            <h4>Solución:</h4>
+            <p><code>HTML5</code> introdujo una serie de etiquetas semánticas como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, y <code>&lt;footer&gt;</code>, que describen la estructura y el propósito de los distintos bloques de contenido. Usar estas etiquetas permite que los navegadores y los motores de búsqueda comprendan mejor el contenido, lo que mejora la accesibilidad y el <code>SEO</code>.</p>
+    
+            <h4>Ejemplo incorrecto:</h4>
+            <pre><code>&lt;div&gt;
+        &lt;h1&gt;Título del sitio&lt;/h1&gt;
+      &lt;/div&gt;</code></pre>
+            
+            <h4>Ejemplo correcto:</h4>
+            <pre><code>&lt;header&gt;
+        &lt;h1&gt;Título del sitio&lt;/h1&gt;
+      &lt;/header&gt;</code></pre>
+    
+            <p>Las etiquetas semánticas también ayudan a las tecnologías de asistencia, como los lectores de pantalla, a interpretar el contenido correctamente, brindando una experiencia más inclusiva.</p>
+        </section>
+    
+        <section id="error-falta-alt">
+            <h3>2. Falta de atributo alt en imágenes</h3>
+            <h4>Error:</h4>
+            <p>No incluir el atributo <code>alt</code> en imágenes es uno de los errores más comunes y graves en términos de accesibilidad. El atributo <code>alt</code> proporciona una descripción textual de la imagen, crucial para los usuarios que no pueden verlas (por ejemplo, personas con discapacidades visuales que utilizan lectores de pantalla).</p>
+            
+            <h4>Solución:</h4>
+            <p>Siempre incluye el atributo <code>alt</code> en las imágenes, describiendo su contenido o función. Si la imagen es decorativa y no aporta información, puedes dejar el <code>alt</code> vacío (<code>alt=""</code>), pero nunca omitirlo.</p>
+            
+            <h4>Ejemplo incorrecto:</h4>
+            <pre><code>&lt;img src="imagen.jpg"&gt;</code></pre>
+            
+            <h4>Ejemplo correcto:</h4>
+            <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+    
+            <p>Incluir textos descriptivos en el atributo <code>alt</code> también mejora el <code>SEO</code>, ya que los motores de búsqueda utilizan esta información para entender el contenido de las imágenes.</p>
+        </section>
+    
+        <section id="error-estructura-etiquetas">
+            <h3>3. Estructura incorrecta de etiquetas</h3>
+            <h4>Error:</h4>
+            <p>El uso incorrecto de las etiquetas de encabezado (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) es un error común que afecta tanto a la accesibilidad como al <code>SEO</code>. Por ejemplo, comenzar con un <code>&lt;h2&gt;</code> o utilizar varias etiquetas <code>&lt;h1&gt;</code> en una misma página puede generar confusión sobre la jerarquía del contenido.</p>
+            
+            <h4>Solución:</h4>
+            <p>Los encabezados deben seguir una jerarquía lógica y estructurada. El <code>&lt;h1&gt;</code> es el título principal y debe aparecer una sola vez por página. Los subsecuentes niveles (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc.) deben reflejar la organización del contenido.</p>
+            
+            <h4>Ejemplo incorrecto:</h4>
+            <pre><code>&lt;h2&gt;Título secundario&lt;/h2&gt;
+        &lt;h1&gt;Título principal&lt;/h1&gt;</code></pre>
+            
+            <h4>Ejemplo correcto:</h4>
+            <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+        &lt;h2&gt;Título secundario&lt;/h2&gt;</code></pre>
+    
+            <p>Una estructura bien organizada facilita la lectura del contenido tanto para los usuarios como para los motores de búsqueda, que entienden mejor la relación jerárquica entre las secciones.</p>
+        </section>
+    
+        <section id="error-cerrar-etiquetas">
+            <h3>4. Olvidar cerrar etiquetas</h3>
+            <h4>Error:</h4>
+            <p>No cerrar las etiquetas adecuadamente es un error básico pero frecuente, que puede provocar comportamientos inesperados en el navegador. Además, el código <code>HTML</code> mal cerrado puede ser difícil de depurar y puede generar problemas en el diseño y la funcionalidad de la página.</p>
+            
+            <h4>Solución:</h4>
+            <p>Asegúrate siempre de cerrar todas las etiquetas, especialmente aquellas que tienen contenido dentro (como <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>, etc.). Aunque algunos navegadores son indulgentes y tratan de corregir estos errores automáticamente, lo ideal es evitar depender de esta flexibilidad.</p>
+            
+            <h4>Ejemplo incorrecto:</h4>
+            <pre><code>&lt;p&gt;Este es un párrafo.</code></pre>
+            
+            <h4>Ejemplo correcto:</h4>
+            <pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</code></pre>
+    
+            <p>Utiliza un editor de código que tenga resaltado de sintaxis y características de autocompletado para ayudarte a evitar este tipo de errores.</p>
+        </section>
+    
+        <section id="error-attributos-obsoletos">
+            <h3>5. Usar atributos obsoletos</h3>
+            <h4>Error:</h4>
+            <p><code>HTML5</code> ha descontinuado muchos atributos y etiquetas que solían ser comunes en versiones anteriores de <code>HTML</code>, como el atributo <code>align</code> o la etiqueta <code>&lt;center&gt;</code>. Usar estos atributos obsoletos genera código innecesariamente complicado y puede hacer que el sitio sea incompatible con navegadores modernos.</p>
+            
+            <h4>Solución:</h4>
+            <p>Consulta la documentación de <code>HTML5</code> y utiliza los métodos recomendados. Por ejemplo, en lugar de usar <code>&lt;center&gt;</code>, se puede utilizar <code>CSS</code> para centrar el contenido.</p>
+            
+            <h4>Ejemplo obsoleto:</h4>
+            <pre><code>&lt;center&gt;Texto centrado&lt;/center&gt;</code></pre>
+            
+            <h4>Ejemplo correcto:</h4>
+            <pre><code>&lt;div style="text-align: center;"&gt;Texto centrado&lt;/div&gt;</code></pre>
+        </section>
+    
+        <section id="error-etiquetas-formulario">
+            <h3>6. Falta de etiquetas de formulario adecuadas</h3>
+            <h4>Error:</h4>
+            <p>Al diseñar formularios, muchos desarrolladores omiten las etiquetas <code>&lt;label&gt;</code> asociadas a los campos de entrada (<code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, etc.). Esto dificulta la accesibilidad, ya que los usuarios con discapacidades pueden no entender la función de cada campo sin una descripción clara.</p>
+            
+            <h4>Solución:</h4>
+            <p>Siempre utiliza la etiqueta <code>&lt;label&gt;</code> y asóciala con el campo correspondiente mediante el atributo <code>for</code>. Esto mejora la accesibilidad y la experiencia del usuario.</p>
+            
+            <h4>Ejemplo incorrecto:</h4>
+            <pre><code>&lt;input type="text"&gt; Nombre</code></pre>
+            
+            <h4>Ejemplo correcto:</h4>
+            <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+        &lt;input type="text" id="nombre"&gt;</code></pre>
+        </section>
+    
+        <section id="error-atributos-css">
+            <h3>7. Usar atributos de estilo en línea</h3>
+            <h4>Error:</h4>
+            <p>El uso de estilos en línea en las etiquetas <code>&lt;div&gt;</code> y <code>&lt;p&gt;</code> puede hacer que el código sea más difícil de mantener y menos escalable. Además, esto puede generar conflictos de estilo y problemas de presentación en diferentes navegadores.</p>
+            
+            <h4>Solución:</h4>
+            <p>Es recomendable utilizar hojas de estilo en cascada (CSS) para separar la presentación del contenido. Esto hace que el código sea más limpio y fácil de gestionar.</p>
+            
+            <h4>Ejemplo incorrecto:</h4>
+            <pre><code>&lt;p style="color: red;"&gt;Texto en rojo&lt;/p&gt;</code></pre>
+            
+            <h4>Ejemplo correcto:</h4>
+            <pre><code>&lt;p class="texto-rojo"&gt;Texto en rojo&lt;/p&gt;</code></pre>
+            <pre><code>/* En tu archivo CSS */
+    .texto-rojo {
+        color: red;
+    }</code></pre>
+        </section>
+    
+        <section id="error-olvidar-doctype">
+            <h3>8. Olvidar la declaración DOCTYPE</h3>
+            <h4>Error:</h4>
+            <p>No incluir la declaración <code>DOCTYPE</code> al principio del documento puede resultar en un comportamiento inesperado en algunos navegadores. Esto afecta la forma en que se renderiza la página y puede generar problemas de compatibilidad.</p>
+            
+            <h4>Solución:</h4>
+            <p>Asegúrate de incluir la declaración <code>DOCTYPE</code> en la parte superior de tu documento <code>HTML</code>. Para <code>HTML5</code>, utiliza:</p>
+            
+            <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+        </section>
+    
+        <section id="error-mensajes-consola">
+            <h3>9. Ignorar los mensajes de la consola</h3>
+            <h4>Error:</h4>
+            <p>Los desarrolladores a menudo ignoran los mensajes de advertencia o error en la consola del navegador, lo que puede llevar a problemas que pasan desapercibidos. La consola proporciona información valiosa sobre errores de código, etiquetas no cerradas, y problemas de acceso a recursos externos.</p>
+            
+            <h4>Solución:</h4>
+            <p>Es fundamental prestar atención a los mensajes de la consola y abordarlos adecuadamente. Esto mejora la calidad del código y ayuda a prevenir problemas futuros.</p>
+        </section>
+    
+        <section id="error-falta-validacion">
+            <h3>10. No validar el código HTML</h3>
+            <h4>Error:</h4>
+            <p>Finalmente, un error común es no validar el código <code>HTML</code> después de escribirlo. Esto puede llevar a que se pase por alto la sintaxis incorrecta o las etiquetas no cerradas, lo que afectará el funcionamiento del sitio.</p>
+            
+            <h4>Solución:</h4>
+            <p>Utiliza herramientas de validación de <code>HTML</code> como el validador de <code>W3C</code> para asegurarte de que tu código cumpla con los estándares. Esto ayuda a identificar y corregir errores que podrían afectar la presentación y funcionalidad de la página.</p>
+        </section>
+        <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+    
+
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+  
+</body>
+
+</html>

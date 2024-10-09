@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buenas prácticas</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Buenas prácticas en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+    <main>
+        <section id="buenas-practicas-html">
+            <h2>Buenas Prácticas en HTML: Consejos para un Código Limpio y Eficiente</h2>
+
+           
+                <h3>¿Por qué son importantes las buenas prácticas en HTML?</h3>
+                <p>Adoptar buenas prácticas en HTML es esencial para crear sitios web accesibles, optimizados y fáciles
+                    de mantener. Un código limpio y estructurado no solo mejora la experiencia del usuario, sino que
+                    también facilita la colaboración con otros desarrolladores y el proceso de mantenimiento a largo
+                    plazo. Implementar buenas prácticas ayuda a prevenir errores, optimizar el rendimiento y asegurar
+                    que tu sitio cumpla con los estándares de la web.</p>
+            
+       
+
+            <section id="consejos-practicas">
+                <h3>Consejos para un Código Limpio y Eficiente</h3>
+                <ol>
+                    <li>
+                        <h4>Estructura semántica</h4>
+                        <p>Utiliza etiquetas semánticas para dar significado al contenido de tu página. Esto no solo
+                            ayuda a los motores de búsqueda y a las tecnologías asistivas, sino que también mejora la
+                            legibilidad del código.</p>
+                        <br>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;header&gt;
+    &lt;h1&gt;Título del sitio&lt;/h1&gt;
+  &lt;/header&gt;</code></pre>
+                    </li>
+                    <br>
+                    <li>
+                        <h4>Asegúrate de que tu código sea válido</h4>
+                        <p>Utiliza herramientas de validación de HTML para verificar que tu código cumpla con los
+                            estándares. Esto ayuda a prevenir errores y garantiza que tu sitio funcione correctamente en
+                            diferentes navegadores.</p>
+                        <br>
+                        <p><strong>Herramienta recomendada:</strong> W3C Markup Validation Service</p>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Utiliza atributos <code>alt</code> para imágenes</h4>
+                        <p>Siempre proporciona un texto alternativo en el atributo <code>alt</code> de las imágenes.
+                            Esto es fundamental para la accesibilidad y ayuda a los motores de búsqueda a comprender el
+                            contenido visual.</p>
+                        <br>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;img src="ruta/a/imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Organiza tu código</h4>
+                        <p>Mantén una estructura organizada y coherente en tu código. Usa la indentación para facilitar
+                            la lectura y el mantenimiento. Agrupa etiquetas relacionadas y utiliza comentarios para
+                            explicar secciones complejas.</p>
+                        <br>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;!-- Cabecera del sitio --&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Título del Sitio&lt;/h1&gt;
+      &lt;/header&gt;
+        
+    &lt;!-- Contenido principal --&gt;
+    &lt;main&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Título de la Sección&lt;/h2&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;</code></pre>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Usa enlaces significativos</h4>
+                        <p>Asegúrate de que los textos de los enlaces sean descriptivos y relevantes. Esto mejora la
+                            accesibilidad y la experiencia del usuario.</p>
+                        <br>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;a href="https://example.com"&gt;Visita nuestro sitio para más información sobre nuestros servicios&lt;/a&gt;</code></pre>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Mantén la compatibilidad con navegadores</h4>
+                        <p>Prueba tu sitio en diferentes navegadores y dispositivos para asegurarte de que se vea y
+                            funcione correctamente en todos ellos. Usa herramientas de pruebas cruzadas como
+                            BrowserStack o Sauce Labs.</p>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Optimiza el uso de etiquetas de encabezado</h4>
+                        <p>Utiliza etiquetas de encabezado de manera jerárquica y lógica (<code>&lt;h1&gt;</code>,
+                            <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc.) para estructurar el contenido de tu
+                            página. Esto no solo ayuda a la SEO, sino que también mejora la accesibilidad.
+                        </p>
+                        <br>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+  &lt;h2&gt;Subtítulo&lt;/h2&gt;
+    &lt;h3&gt;Detalles&lt;/h3&gt;</code></pre>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Mantén los formularios accesibles</h4>
+                        <p>Asegúrate de que los formularios sean accesibles al usar etiquetas <code>&lt;label&gt;</code>
+                            correctamente asociadas a los campos de entrada. Esto mejora la usabilidad y la
+                            accesibilidad.</p>
+                        <br>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" id="nombre" name="nombre"&gt;</code></pre>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Carga eficiente de recursos</h4>
+                        <p>Minimiza el tamaño de los archivos HTML, CSS y JavaScript. Utiliza compresión y optimización
+                            de imágenes para mejorar los tiempos de carga del sitio. Considera usar técnicas de carga
+                            diferida (lazy loading) para imágenes y videos, lo que mejora la experiencia del usuario al
+                            reducir los tiempos de espera.</p>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Documenta tu código</h4>
+                        <p>Incluye comentarios que expliquen secciones importantes o decisiones de diseño en tu código.
+                            Esto es útil para ti y para otros desarrolladores que trabajen en el proyecto.</p>
+                        <br>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>&lt;!-- Este es el formulario de contacto --&gt;
+  &lt;form action="enviar.php" method="post"&gt;
+    &lt;!-- Campo para el nombre del usuario --&gt;
+    &lt;input type="text" name="nombre" required&gt;
+  &lt;/form&gt;</code></pre>
+                        <br>
+                    </li>
+
+                    <li>
+                        <h4>Valida y prueba tu sitio</h4>
+                        <p>Realiza pruebas regulares en tu sitio web para identificar y corregir errores. Utiliza
+                            herramientas de auditoría como Google Lighthouse para obtener recomendaciones sobre el
+                            rendimiento, la accesibilidad y las mejores prácticas. También es útil realizar pruebas de
+                            usabilidad para asegurarte de que tu sitio cumpla con las expectativas de los usuarios.</p>
+                    </li>
+                </ol>
+            </section>
+        
+        <p>Seguir buenas prácticas en HTML es fundamental para crear sitios web efectivos, accesibles y fáciles de
+            mantener. Al adoptar un enfoque estructurado y consciente en la codificación, no solo mejorarás la
+            experiencia del usuario, sino que también facilitarás el trabajo en equipo y el mantenimiento a largo plazo
+            de tu proyecto web.</p>
+        
+    </section>
+    <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #005187;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font: bold 155% monospace;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #63a5c2;
+}
+
+.principal {
+    display: flex;
+    height: calc(100vh - 64px);
+    overflow: hidden;
+    flex-wrap: wrap; 
+}
+.contenedor {
+    width: 45%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfeff;
+}
+
+.imagen {
+    max-width: 85%;
+    height: auto; 
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.imagen:hover {
+    transform: scale(1.1);
+}
+
+.logos {
+    width: 55%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fcfeff;
+    box-sizing: border-box; 
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.borde {
+    width: 120px; 
+    height: auto;
+    margin: 10px;
+    border-radius: 40%;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.borde:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 0.75rem rgb(73, 60, 71));
+}
+
+td {
+    text-align: center;
+    font: bold 130% monospace;
+}
+
+.texto {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .principal {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .contenedor, .logos {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .imagen {
+        max-width: 80%; 
+    }
+
+    .borde {
+        width: 100px; 
+    }
+}
+
+@media (max-width: 400px) {
+    li {
+        float: none; 
+        text-align: center; 
+    }
+
+    ul {
+        flex-direction: column; 
+    }
+
+    li a {
+        padding: 12px; 
+        font-size: 110%; 
+    }
+
+    .borde {
+        width: 67px; 
+    }
+
+    td {
+        font-size: 100%; 
+    }
+}

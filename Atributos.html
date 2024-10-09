@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos en HTML</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Atributos en HTML</h1>
+    </header>
+
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+    <main>
+        <section id="atributos-html">
+            <h2>¿Qué son los atributos en HTML?</h2>
+            <p>Los atributos en HTML son propiedades adicionales que permiten agregar información extra o modificar el comportamiento de los elementos en un documento web. Estos atributos ofrecen a los desarrolladores un control más preciso sobre cómo se deben mostrar o funcionar los elementos, y pueden influir en aspectos como la apariencia, la accesibilidad o la interacción con los usuarios.</p>
+            <p>Generalmente, los atributos se colocan dentro de la etiqueta de apertura de un elemento y consisten en un nombre de atributo y un valor. El nombre de atributo indica el tipo de información que estamos proporcionando, mientras que el valor define el dato específico que le asignamos a dicho atributo.</p>
+    
+            <h3>Estructura básica de un atributo</h3>
+            <pre><code>&lt;etiqueta nombre_atributo="valor"&gt;Contenido&lt;/etiqueta&gt;</code></pre>
+            <br>
+            <p>Por ejemplo, en una etiqueta de imagen <code>&lt;img&gt;</code>, el atributo <code>src</code> define la ubicación de la imagen y el atributo <code>alt</code> ofrece una descripción alternativa.</p>
+            <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="atributos-comunes">
+            <h2>Atributos comunes en HTML</h2>
+    
+            <section id="id-atributo">
+                <h3>1. id (Identificador único)</h3>
+                <p>El atributo <code>id</code> se utiliza para asignar un identificador único a un elemento HTML. Cada elemento debe tener un <code>id</code> único en todo el documento, lo que permite que se pueda hacer referencia directa a él desde el código CSS o JavaScript.</p>
+                <p>Además de ser utilizado para aplicar estilos específicos, el atributo <code>id</code> puede usarse para manipular elementos dinámicamente mediante scripts, o como ancla para enlaces internos dentro de una página web, permitiendo una navegación más fluida.</p>
+                <br>
+                <h4>Ejemplo</h4>
+                <pre><code>&lt;h1 id="titulo-principal"&gt;Este es el título principal&lt;/h1&gt;</code></pre>
+                <p>Uso recomendado: Usa <code>id</code> cuando necesites hacer referencia a un elemento de manera única, ya sea para personalizar su estilo o para manipularlo con JavaScript.</p>
+                <br>
+            </section>
+    
+            <section id="class-atributo">
+                <h3>2. class (Clase)</h3>
+                <p>El atributo <code>class</code> permite asignar uno o más nombres de clase a un elemento HTML. A diferencia de <code>id</code>, múltiples elementos pueden compartir la misma clase, lo que es ideal cuando queremos aplicar estilos o comportamientos similares a un grupo de elementos.</p>
+                <p>Este atributo es clave para mantener el código ordenado y estructurado, ya que permite aplicar estilos globales a varios elementos sin tener que repetir código CSS. También es útil en JavaScript para seleccionar múltiples elementos de una misma clase y manipularlos de manera conjunta.</p>
+                <br>
+                <h4>Ejemplo</h4>
+                <pre><code>&lt;p class="texto-destacado"&gt;Este es un párrafo destacado.&lt;/p&gt;</code></pre>
+                <p>Uso recomendado: Usa <code>class</code> para agrupar elementos que compartan el mismo estilo o comportamiento, facilitando su personalización a través de CSS y JavaScript.</p>
+                <br>
+            </section>
+    
+            <section id="src-atributo">
+                <h3>3. src (Fuente)</h3>
+                <p>El atributo <code>src</code> (source) se emplea principalmente en elementos multimedia, como imágenes, videos o scripts, para especificar la ubicación del archivo que se desea mostrar o cargar.</p>
+                <p>Es importante asegurarse de que la ruta especificada en <code>src</code> sea correcta y accesible desde el servidor, ya que de lo contrario el contenido multimedia no se cargará correctamente. Además, en el caso de imágenes, el atributo <code>src</code> debe combinarse con <code>alt</code> para mejorar la accesibilidad.</p>
+                <br>
+                <h4>Ejemplo con imágenes</h4>
+                <pre><code>&lt;img src="imagen.jpg" alt="Una imagen bonita"&gt;</code></pre>
+                <br>
+                <h4>Ejemplo con videos</h4>
+                <pre><code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code></pre>
+                <p>Uso recomendado: Asegúrate de que las rutas especificadas en <code>src</code> sean correctas y que el archivo multimedia esté disponible en el servidor.</p>
+                <br>
+            </section>
+    
+            <section id="alt-atributo">
+                <h3>4. alt (Texto alternativo)</h3>
+                <p>El atributo <code>alt</code> proporciona una descripción alternativa para una imagen. Este atributo es fundamental tanto para mejorar la accesibilidad, permitiendo que las personas con discapacidades visuales comprendan el contenido de la imagen, como para los motores de búsqueda (SEO), que utilizan el contenido del atributo <code>alt</code> para indexar imágenes en sus resultados.</p>
+                <p>En caso de que una imagen no se cargue correctamente, el texto del atributo <code>alt</code> se mostrará en su lugar, ofreciendo contexto sobre lo que debería haberse mostrado.</p>
+                <br>
+                <h4>Ejemplo</h4>
+                <pre><code>&lt;img src="logo.png" alt="Logotipo de la empresa"&gt;</code></pre>
+                <p>Uso recomendado: Siempre incluye una descripción precisa y concisa en el atributo <code>alt</code> para mejorar la accesibilidad y el SEO.</p>
+                <br>
+            </section>
+    
+            <section id="href-atributo">
+                <h3>5. href (Referencia de hipervínculo)</h3>
+                <p>El atributo <code>href</code> se utiliza en la etiqueta <code>&lt;a&gt;</code> para especificar la URL a la que el enlace llevará al usuario. Es uno de los atributos más comunes en HTML, y permite crear hipervínculos hacia páginas externas, documentos internos, o incluso secciones dentro de la misma página.</p>
+                <p>El valor de <code>href</code> puede ser una URL absoluta o relativa, dependiendo de si se está enlazando a un recurso dentro del mismo sitio o a uno externo.</p>
+                <br>
+                <h4>Ejemplo</h4>
+                <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Visita nuestro sitio web&lt;/a&gt;</code></pre>
+                <p>Uso recomendado: Verifica siempre que los enlaces sean correctos y accesibles. Usa rutas relativas cuando estés enlazando a archivos internos dentro del mismo sitio web.</p>
+                <br>
+            </section>
+    
+            <section id="target-atributo">
+                <h3>6. target (Destino del enlace)</h3>
+                <p>El atributo <code>target</code> define cómo se debe abrir el enlace especificado en <code>&lt;a&gt;</code>. Uno de los valores más comunes es <code>_blank</code>, que indica que el enlace se abrirá en una nueva pestaña o ventana del navegador.</p>
+                <p>Esto es útil para evitar que el usuario salga de la página actual al hacer clic en enlaces externos o de importancia secundaria.</p>
+                <br>
+                <h4>Ejemplo</h4>
+                <pre><code>&lt;a href="https://www.ejemplo.com" target="_blank"&gt;Abrir en nueva pestaña&lt;/a&gt;</code></pre>
+                <p>Uso recomendado: Utiliza <code>target="_blank"</code> cuando desees que el enlace se abra en una nueva pestaña, especialmente si el destino es una página externa.</p>
+                <br>
+            </section>
+    
+            <section id="style-atributo">
+                <h3>7. style (Estilos en línea)</h3>
+                <p>El atributo <code>style</code> permite aplicar reglas CSS directamente a un elemento HTML. Aunque es una manera rápida de agregar estilos a un elemento en particular, su uso excesivo puede dificultar el mantenimiento del código, ya que los estilos quedan embebidos en el HTML en lugar de ser gestionados en un archivo CSS separado.</p>
+                <p>Se recomienda utilizar el atributo <code>style</code> solo para modificaciones puntuales y en su lugar preferir las hojas de estilo externas para una mejor organización del código.</p>
+                <br>
+                <h4>Ejemplo</h4>
+                <pre><code>&lt;p style="color: blue; font-size: 18px;"&gt;Este texto es azul y tiene un tamaño de 18px.&lt;/p&gt;</code></pre>
+                <p>Uso recomendado: Limita el uso del atributo <code>style</code> a casos específicos y utiliza archivos CSS para estilos generales y mantenibles.</p>
+                <br>
+            </section>
+        </section>
+    
+        <section id="combinacion-atributos">
+            <h2>Combinación de múltiples atributos</h2>
+            <p>Es común en HTML combinar varios atributos dentro de una misma etiqueta para enriquecer su funcionalidad.
+                Al hacerlo, puedes agregar enlaces, estilos, identificadores, y más, logrando un mayor control sobre la
+                presentación y el comportamiento de los elementos.</p>
+            <br>
+            <h3>Ejemplo</h3>
+            <pre><code>&lt;a href="https://www.ejemplo.com" class="enlace" id="enlace-1" target="_blank"&gt;Enlace con varios atributos&lt;/a&gt;</code></pre>
+            <p>En este ejemplo, se combinan atributos de referencia de hipervínculo (<code>href</code>), clase
+                (<code>class</code>), identificador único (<code>id</code>), y destino del enlace (<code>target</code>),
+                mostrando cómo se puede crear un enlace enriquecido y bien definido.</p>
+        </section>
+
+        <section id="importancia-atributos">
+            <h2>La importancia de los atributos</h2>
+            <p>Los atributos son esenciales para agregar funcionalidad, estilo y accesibilidad a los elementos HTML.
+                Además de proporcionar detalles importantes como la fuente de un archivo multimedia o la descripción de
+                una imagen, permiten personalizar cómo interactúan los usuarios con la página. Al usarlos correctamente,
+                se puede mejorar significativamente la experiencia del usuario, optimizar la página para los motores de
+                búsqueda, y asegurar que los elementos sean accesibles para todas las personas, incluidas aquellas con
+                discapacidades.</p>
+            <p>El conocimiento y uso adecuado de los atributos es una habilidad fundamental para cualquier desarrollador
+                web, ya que mejora la flexibilidad y el control en la creación de sitios interactivos y accesibles.</p>
+        </section>
+        <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Cris y Dani. Todos los derechos reservados.</p>
+    </footer>
+   
+</body>
+
+</html>

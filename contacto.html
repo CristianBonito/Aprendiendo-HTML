@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociales de los Creadores</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #005187;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            font: bold 155% monospace;
+            padding: 16px;
+            height: 24px;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: #00425a;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #005187;
+        }
+
+
+
+        li a:hover:not(.active) {
+            background-color: #63a5c2;
+        }
+
+        .button-back {
+            background-color: #005187; /* Color de fondo del botón */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #deebf8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            width: 90%;
+        }
+
+
+        h1 {
+            color: #005187;
+            margin: 20px 0;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            color: #005187;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+
+        .button {
+            text-decoration: none;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            width: 85%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+            z-index: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        .button:hover:before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .instagram {
+            background: #84b6f4;
+        }
+
+        .facebook {
+            background: #4d82bc;
+        }
+
+        .imagen {
+            max-width: 85%;
+            height: auto;
+            position: relative;
+            transition: 0.4s ease;
+        }
+
+        .imagen:hover {
+            transform: scale(1.1);
+        }
+
+        .email {
+            background: #c4dafa;
+        }
+
+
+        @media (max-width: 900px) {
+            .principal {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .contenedor,
+            .logos {
+                width: 100%;
+                height: auto;
+            }
+
+            .imagen {
+                max-width: 80%;
+            }
+
+            .borde {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="home.png" alt="home"></a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li style="float:right"><a href="Alumnos.html">Alumnos</a></li>
+        </ul>
+    </nav>
+
+    <h1>Contáctanos</h1>
+
+    <div class="container">
+        <div class="card">
+            <h2>Cristian Bonito</h2>
+            <div class="buttons">
+                <a href="https://www.instagram.com/Cristian.butera" class="button instagram" target="_blank">Instagram:
+                    @Cristian.butera</a>
+                <a href="https://www.facebook.com/CristianJairRamirezCazarez" class="button facebook"
+                    target="_blank">Facebook: @CristianJair Ramírez Cazarez</a>
+                <a href="mailto:cristianjairramirezcazarez@gmail.com" class="button email" target="_blank">Correo:
+                    cristianjair@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Daniela Guapota</h2>
+            <div class="buttons">
+                <a href="https://www.instagram.com/Daniela_mugz" class="button instagram" target="_blank">Instagram:
+                    @Daniela_mugz</a>
+                <a href="https://www.facebook.com/DanielaMuñizGómez" class="button facebook" target="_blank">Facebook:
+                    @Daniela Muñiz Gómez</a>
+                <a href="mailto:danielamugz@gmail.com" class="button email" target="_blank">Correo:
+                    danielamugz@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="button-back">Volver al Menú</a>
+
+</body>
+
+</html>

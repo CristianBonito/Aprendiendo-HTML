@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Enlaces en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+
+    <main>
+        <section id="que-es-enlace">
+            <h2>1. ¿Qué es un enlace en HTML?</h2>
+            <p>Un enlace, también conocido como hipervínculo, es un elemento <code>HTML</code> que permite a los usuarios acceder a otra página o recurso al hacer clic. Se define usando la etiqueta <code>&lt;a&gt;</code>, con el atributo <code>href</code> (Hypertext Reference) que indica la URL del destino.</p>
+            <br>
+            <h4>Ejemplo básico:</h4>
+            <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Visita nuestro sitio web&lt;/a&gt;</code></pre>
+            <br>
+            <p>En este ejemplo, el texto "Visita nuestro sitio web" es el texto que los usuarios verán, y al hacer clic, serán redirigidos a la URL especificada en <code>href</code>.</p>
+        </section>
+    
+        <section id="tipos-de-enlaces">
+            <h2>2. Tipos de Enlaces</h2>
+    
+            <section id="enlaces-absolutos">
+                <h3>Enlaces Absolutos</h3>
+                <p>Los enlaces absolutos incluyen la URL completa del recurso, incluyendo el protocolo (<code>http://</code> o <code>https://</code>) y el nombre de dominio. Se utilizan cuando se enlaza a una página externa o a un recurso en otro dominio.</p>
+                <br>
+                <h4>Ejemplo:</h4>
+                <pre><code>&lt;a href="https://www.wikipedia.org"&gt;Wikipedia&lt;/a&gt;</code></pre>
+            </section>
+    
+            <section id="enlaces-relativos">
+                <h3>Enlaces Relativos</h3>
+                <p>Los enlaces relativos solo incluyen la ruta al archivo dentro del mismo dominio, sin necesidad de escribir la URL completa. Estos enlaces son ideales para sitios internos y reducen la posibilidad de errores si se mueve el sitio a otro dominio.</p>
+                <br>
+                <h4>Ejemplo:</h4>
+                <pre><code>&lt;a href="/contacto.html"&gt;Contacto&lt;/a&gt;</code></pre>
+                <br>
+                <p>En este caso, se asume que el archivo <code>contacto.html</code> está ubicado dentro del mismo servidor donde se encuentra la página actual.</p>
+            </section>
+        </section>
+    
+        <section id="enlaces-internos">
+            <h2>3. Enlaces Internos (Anclas)</h2>
+            <p>Los enlaces internos permiten saltar a una parte específica de una misma página, lo que es útil para mejorar la navegación en documentos largos. Para hacerlo, se asigna un atributo <code>id</code> al elemento de destino y se enlaza usando el símbolo <code>#</code> seguido del <code>id</code> en el <code>href</code>.</p>
+            <br>
+            <h4>Ejemplo:</h4>
+            <pre><code>&lt;a href="#seccion1"&gt;Ir a la Sección 1&lt;/a&gt;</code></pre>
+            <pre><code>&lt;h2 id="seccion1"&gt;Esta es la Sección 1&lt;/h2&gt;</code></pre>
+            <br>
+            <p>Al hacer clic en el enlace, la página se desplazará automáticamente a la sección con el identificador <code>seccion1</code>.</p>
+        </section>
+    
+        <section id="abrir-nueva-pestana">
+            <h2>4. Abrir Enlaces en una Nueva Pestaña</h2>
+            <p>A veces es útil que los enlaces se abran en una nueva pestaña para evitar que el usuario pierda su lugar en la página actual. Esto se logra añadiendo el atributo <code>target="_blank"</code> al enlace.</p>
+            <br>
+            <h4>Ejemplo:</h4>
+            <pre><code>&lt;a href="https://www.ejemplo.com" target="_blank"&gt;Abrir en nueva pestaña&lt;/a&gt;</code></pre>
+            <br>
+            <p><strong>Nota de seguridad:</strong> Siempre que uses <code>target="_blank"</code>, también debes incluir <code>rel="noopener noreferrer"</code> para prevenir problemas de seguridad.</p>
+        </section>
+    
+        <section id="enlaces-correo-telefono">
+            <h2>5. Enlaces de Correo Electrónico y Teléfono</h2>
+    
+            <section id="enlaces-correo">
+                <h3>Enlaces de Correo Electrónico</h3>
+                <p>Utiliza el protocolo <code>mailto:</code> en el atributo <code>href</code> para crear un enlace que abra un correo electrónico preconfigurado.</p>
+                <br>
+                <h4>Ejemplo:</h4>
+                <pre><code>&lt;a href="mailto:info@ejemplo.com"&gt;Contáctanos por correo&lt;/a&gt;</code></pre>
+            </section>
+    
+            <section id="enlaces-telefono">
+                <h3>Enlaces de Teléfono</h3>
+                <p>Utiliza el protocolo <code>tel:</code> para que los usuarios puedan hacer llamadas desde un dispositivo móvil.</p>
+                <br>
+                <h4>Ejemplo:</h4>
+                <pre><code>&lt;a href="tel:+1234567890"&gt;Llamar al soporte&lt;/a&gt;</code></pre>
+            </section>
+        </section>
+    
+        <section id="texto-enlace">
+            <h2>6. Texto del Enlace (Anchor Text)</h2>
+            <p>El texto del enlace debe ser descriptivo y relevante para el contenido al que apunta. Esto no solo ayuda a los usuarios a entender a dónde irán, sino que también es importante para la optimización en motores de búsqueda (<code>SEO</code>).</p>
+            <br>
+            <h4>Buenas prácticas:</h4>
+            <ul>
+                <li>Evita frases genéricas: No uses "Haz clic aquí" como texto del enlace, ya que no proporciona contexto suficiente.</li>
+                <li>Usa palabras clave relevantes: Los motores de búsqueda priorizan los enlaces que contienen palabras clave descriptivas.</li>
+            </ul>
+            <h4>Ejemplo:</h4>
+            <pre><code>&lt;a href="https://www.ejemplo.com/servicios"&gt;Conoce nuestros servicios&lt;/a&gt;</code></pre>
+            <p>Este texto no solo es claro para el usuario, sino que también mejora el <code>SEO</code>.</p>
+        </section>
+    
+        <section id="accesibilidad-enlaces">
+            <h2>7. Accesibilidad en Enlaces</h2>
+            <p>Asegurarte de que los enlaces sean accesibles para todos los usuarios es vital. Las personas con discapacidades visuales o motoras dependen de un texto de enlace significativo para navegar de forma eficiente.</p>
+            <br>
+            <h4>Recomendaciones para accesibilidad:</h4>
+            <ul>
+                <li>Texto claro y descriptivo: Los usuarios de lectores de pantalla dependen del texto del enlace para entender su propósito.</li>
+                <li>Enlaces diferenciables: Usa estilos visuales como subrayados o colores diferentes para que los enlaces se destaquen del resto del texto.</li>
+                <li>Navegación con teclado: Asegúrate de que los enlaces sean accesibles mediante el teclado, respetando el orden natural del foco.</li>
+            </ul>
+        </section>
+    
+        <section id="errores-comunes-enlaces">
+            <h2>8. Errores Comunes al Usar Enlaces</h2>
+    
+            <section id="enlaces-rotos">
+                <h3>Enlaces rotos</h3>
+                <p>Los enlaces rotos (URLs que no funcionan) frustran a los usuarios y pueden impactar negativamente en el <code>SEO</code> de tu página.</p>
+                <br>
+                <h4>Solución:</h4>
+                <ul>
+                    <li>Realiza pruebas de todos los enlaces en tu sitio antes de lanzarlo.</li>
+                    <li>Utiliza herramientas de validación de enlaces para identificar y solucionar enlaces rotos.</li>
+                </ul>
+            </section>
+    
+            <section id="texto-descriptivo">
+                <h3>No utilizar texto descriptivo</h3>
+                <p>Problema: Usar texto vago o irrelevante como "Haz clic aquí" hace que los enlaces sean difíciles de usar para las personas con discapacidades y afecta el <code>SEO</code>.</p>
+                <br>
+                <h4>Solución:</h4>
+                <p>Siempre utiliza texto significativo que describa el destino o acción del enlace.</p>
+            </section>
+    
+            <section id="rel-noopener">
+                <h3>Olvidar rel="noopener noreferrer"</h3>
+                <p>Problema: No usar <code>rel="noopener noreferrer"</code> puede dejar tu sitio vulnerable a ataques de seguridad cuando se usan enlaces externos.</p>
+                <br>
+                <h4>Solución:</h4>
+                <p>Siempre incluye <code>rel="noopener noreferrer"</code> en los enlaces que utilizan <code>target="_blank"</code>.</p>
+            </section>
+        </section>
+    
+        <section id="conclusiones">
+            <p>Los enlaces son componentes cruciales de la web y deben ser utilizados de manera efectiva para proporcionar una buena experiencia de usuario y cumplir con las mejores prácticas de accesibilidad y <code>SEO</code>. Al seguir estas pautas, podrás crear enlaces que sean útiles y efectivos para tus visitantes.</p>
+        </section>
+        <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+    
+
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+   
+</body>
+
+</html>

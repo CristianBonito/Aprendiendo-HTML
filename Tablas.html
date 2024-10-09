@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas</title>
+  <link rel="icon" href="html.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Tablas en HTML</h1>
+  </header>
+
+  <!-- Barra de navegación vertical -->
+  <nav class="vertical">
+    <a href="index.html">
+        <img src="home.png" alt="Inicio">
+    </a>
+    <a href="Introduccion.html">Introducción</a>
+    <a href="Estructura.html">Estructura</a>
+    <a href="Etiquetas.html">Etiquetas</a>
+    <a href="Atributos.html">Atributos</a>
+    <a href="Listas.html">Listas</a>
+    <a href="Tablas.html">Tablas</a>
+    <a href="Formularios.html">Formularios</a>
+    <a href="Multimedia.html">Multimedia</a>
+    <a href="Enlaces.html">Enlaces</a>
+    <a href="Semantica.html">Semántica</a>
+    <a href="Errores.html">Errores comunes</a>
+    <a href="Practicas.html">Buenas prácticas</a>
+</nav>
+
+
+  <main>
+
+    <section id="tablas-html">
+      <h2>Tablas en HTML: Creación y Estilos</h2>
+      <p>Las tablas en HTML se utilizan para organizar y mostrar información de manera estructurada en filas y columnas.
+        Aunque anteriormente se usaban para diseñar el layout de sitios web, esa práctica ha sido reemplazada por el uso
+        de CSS. Hoy en día, las tablas son esenciales para mostrar datos que requieren estructura y legibilidad, como
+        estadísticas, calendarios y reportes financieros.</p>
+
+      <h3>Estructura básica de una tabla</h3>
+      <p>Para crear una tabla en HTML, necesitas entender las etiquetas clave que definen su estructura:</p>
+      <ul>
+        <li><code>&lt;table&gt;</code>: Esta etiqueta envuelve el contenido de la tabla y define el inicio y fin de la
+          misma.</li>
+        <li><code>&lt;tr&gt;</code>: Representa una fila en la tabla. Cada fila contiene celdas con datos o encabezados.
+        </li>
+        <li><code>&lt;th&gt;</code>: Define una celda de encabezado de tabla. Usualmente se utiliza en la primera fila o
+          columna para describir el contenido de las celdas bajo o a la derecha de esta.</li>
+        <li><code>&lt;td&gt;</code>: Define una celda de datos. Es el contenedor de cada unidad de información dentro de
+          la tabla.</li>
+      </ul>
+
+      <h4>Ejemplo básico de tabla</h4>
+      <pre><code>&lt;table&gt;
+&lt;tr&gt;
+  &lt;th&gt;Nombre&lt;/th&gt;
+  &lt;th&gt;Edad&lt;/th&gt;
+  &lt;th&gt;Ciudad&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Juan&lt;/td&gt;
+  &lt;td&gt;25&lt;/td&gt;
+  &lt;td&gt;Ciudad de México&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;María&lt;/td&gt;
+  &lt;td&gt;30&lt;/td&gt;
+  &lt;td&gt;Guadalajara&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table class="custom-table">
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+        </tr>
+        <tr>
+          <td>Juan</td>
+          <td>25</td>
+          <td>Ciudad de México</td>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td>30</td>
+          <td>Guadalajara</td>
+        </tr>
+      </table>
+
+      <h3>Atributos comunes en las tablas</h3>
+      <p>Las tablas tienen varios atributos que permiten personalizar su apariencia y funcionalidad.</p>
+      <br>
+      <h4>1. border (Borde)</h4>
+      <p>El atributo <code>border</code> define el grosor del borde de la tabla. Aunque este atributo se usaba en
+        versiones más antiguas de HTML, actualmente es mejor manejar los bordes usando CSS para un mayor control y
+        personalización.</p>
+      <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Producto&lt;/th&gt;
+      &lt;th&gt;Precio&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Camisa&lt;/td&gt;
+      &lt;td&gt;$20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table border="1">
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Camisa</td>
+          <td>$20</td>
+        </tr>
+      </table>
+
+      <br>
+      <h4>2. colspan y rowspan</h4>
+      <p>Estos atributos permiten que una celda se extienda a lo largo de varias columnas o filas, respectivamente, lo
+        que es útil para agrupar datos relacionados.</p>
+      <ul>
+        <li><code>colspan</code>: Extiende una celda en varias columnas.</li>
+        <li><code>rowspan</code>: Extiende una celda en varias filas.</li>
+      </ul>
+
+      <h5>Ejemplo de colspan:</h5>
+      <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th colspan="2"&gt;Encabezado Combinado&lt;/th&gt;
+    &lt;/tr&gt;
+      &lt;tr&gt;
+      &lt;td&gt;Producto&lt;/td&gt;
+      &lt;td&gt;Precio&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table border="1">
+        <tr>
+          <th colspan="2">Encabezado Combinado</th>
+        </tr>
+        <tr>
+          <td>Producto</td>
+          <td>Precio</td>
+        </tr>
+      </table>
+      <br>
+
+      <h5>Ejemplo de rowspan:</h5>
+      <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th rowspan="2"&gt;Categoría&lt;/th&gt;
+      &lt;td&gt;Frutas&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Verduras&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table border="1">
+        <tr>
+          <th rowspan="2">Categoría</th>
+          <td>Frutas</td>
+        </tr>
+        <tr>
+          <td>Verduras</td>
+        </tr>
+      </table>
+      <br>
+      <h3>Estilizando tablas con CSS</h3>
+      <p>Una de las ventajas del uso moderno de HTML y CSS es la capacidad de darle estilo a las tablas, mejorando su
+        presentación y adaptándola a las necesidades visuales del sitio.</p>
+      <br>
+      <h4>1. Ancho y alto de la tabla</h4>
+      <p>Para ajustar el tamaño de la tabla, puedes usar las propiedades <code>width</code> y <code>height</code> en
+        CSS.</p>
+      <pre><code>&lt;table style="width: 100%; height: 200px;"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Producto&lt;/th&gt;
+      &lt;th&gt;Precio&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Camisa&lt;/td&gt;
+        &lt;td&gt;$20&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table border="1" style="width: 100%; height: 200px;">
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Camisa</td>
+          <td>$20</td>
+        </tr>
+      </table>
+      <br>
+
+      <h4>2. Ajuste de espaciado entre celdas</h4>
+      <p>Con <code>border-spacing</code>, puedes ajustar el espacio entre las celdas de la tabla.</p>
+      <pre><code>&lt;table style="border-spacing: 10px;"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Producto&lt;/th&gt;
+      &lt;th&gt;Precio&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Camisa&lt;/td&gt;
+      &lt;td&gt;$20&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table border="1" style="border-spacing: 10px;">
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Camisa</td>
+          <td>$20</td>
+        </tr>
+      </table>
+      <br>
+      <h4>3. Colapsar bordes</h4>
+      <p>Con el estilo <code>border-collapse</code>, puedes colapsar los bordes de la tabla.</p>
+      <pre><code>&lt;table style="border-collapse: collapse;" border="1"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Producto&lt;/th&gt;
+      &lt;th&gt;Precio&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Camisa&lt;/td&gt;
+      &lt;td&gt;$20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table style="border-collapse: collapse;" border="1">
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Camisa</td>
+          <td>$20</td>
+        </tr>
+      </table>
+      <br>
+      <h4>4. Colores y fondo</h4>
+      <p>Usando <code>background-color</code> y <code>color</code>, puedes personalizar los colores de fondo y del
+        texto.</p>
+      <pre><code>&lt;table border="1"&gt;
+    &lt;tr style="background-color: #00425a; color: white;"&gt;
+      &lt;th&gt;Producto&lt;/th&gt;
+      &lt;th&gt;Precio&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Camisa&lt;/td&gt;
+      &lt;td&gt;$20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table border="1">
+        <tr style="background-color: #00425a; color: white;">
+          <th>Producto</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Camisa</td>
+          <td>$20</td>
+        </tr>
+      </table>
+      <br>
+      <h4>5. Alineación de contenido</h4>
+      <p>Puedes usar <code>text-align</code> para alinear horizontalmente el texto y <code>vertical-align</code> para
+        alinear el contenido dentro de las celdas.</p>
+      <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th style="text-align: left;"&gt;Producto&lt;/th&gt;
+      &lt;th style="text-align: right;"&gt;Precio&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style="vertical-align: middle;"&gt;Camisa&lt;/td&gt;
+      &lt;td&gt;$20&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+      <br>
+      <p><strong>Salida:</strong></p>
+      <table border="1">
+        <tr>
+          <th style="text-align: left;">Producto</th>
+          <th style="text-align: right;">Precio</th>
+        </tr>
+        <tr>
+          <td style="vertical-align: middle;">Camisa</td>
+          <td>$20</td>
+        </tr>
+      </table>
+      <br>
+      <p>Las tablas en HTML son una herramienta poderosa para organizar datos. Aunque su diseño ha evolucionado con el
+        tiempo, siguen siendo fundamentales para presentar información tabular. Con CSS, es posible personalizar su
+        apariencia, mejorando tanto la estética como la funcionalidad, y con buenas prácticas de accesibilidad, puedes
+        asegurarte de que toda tu audiencia pueda interactuar con ellas correctamente.</p>
+      <br>
+      <a href="index.html" class="button-back">Volver al Menú</a>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+  </footer>
+</body>
+
+</html>

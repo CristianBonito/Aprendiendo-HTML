@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Listas en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+
+    <main>
+        <section id="listas-html">
+            <h2>Listas en HTML: Ordenadas, Desordenadas y de Definición</h2>
+            <p>Las listas en HTML son un conjunto de elementos agrupados que se pueden presentar de manera ordenada o
+                desordenada. Son esenciales para organizar la información de forma clara y estructurada, facilitando su
+                comprensión y navegación. Existen tres tipos principales de listas en HTML:</p>
+
+            <ul>
+                <li>Listas desordenadas (<code>&lt;ul&gt;</code>)</li>
+                <li>Listas ordenadas (<code>&lt;ol&gt;</code>)</li>
+                <li>Listas de definición (<code>&lt;dl&gt;</code>)</li>
+            </ul>
+
+            <section id="listas-desordenadas">
+                <h3>1. Listas desordenadas (<code>&lt;ul&gt;</code>)</h3>
+                <p>Las listas desordenadas presentan los elementos de manera agrupada pero sin un orden específico. Cada
+                    elemento de la lista se muestra con una viñeta o "bullet" por defecto. Estas listas son ideales
+                    cuando el orden no es importante, sino solo su agrupación.</p>
+                <br>
+                <h4>Estructura básica</h4>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+    &lt;li&gt;Elemento 3&lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <ul>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                </ul>
+
+                <h4>Personalización de las viñetas</h4>
+                <p>Las viñetas predeterminadas son círculos sólidos, pero puedes cambiar su estilo usando CSS y el
+                    atributo <code>list-style-type</code>. Algunos ejemplos incluyen:</p>
+                <ul>
+                    <li><code>disc</code>: círculo sólido (predeterminado).</li>
+                    <li><code>circle</code>: círculo vacío.</li>
+                    <li><code>square</code>: cuadrado sólido.</li>
+                </ul>
+                <br>
+                <h4>Ejemplo de personalización:</h4>
+                <pre><code>&lt;ul style="list-style-type: square;"&gt;
+    &lt;li&gt;Elemento con cuadrado&lt;/li&gt;
+    &lt;li&gt;Otro elemento&lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+            </section>
+
+            <section id="listas-ordenadas">
+                <h3>2. Listas ordenadas (<code>&lt;ol&gt;</code>)</h3>
+                <p>Las listas ordenadas presentan los elementos en un orden específico, numerados de manera secuencial o
+                    usando letras, números romanos, etc. Son útiles cuando el orden de los elementos es relevante, como
+                    en instrucciones o pasos.</p>
+                <br>
+                <h4>Estructura básica</h4>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Primer paso&lt;/li&gt;
+    &lt;li&gt;Segundo paso&lt;/li&gt;
+    &lt;li&gt;Tercer paso&lt;/li&gt;
+  &lt;/ol&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <ol>
+                    <li>Primer paso</li>
+                    <li>Segundo paso</li>
+                    <li>Tercer paso</li>
+                </ol>
+                <br>
+                <h4>Personalización de la numeración</h4>
+                <p>Puedes modificar el estilo de numeración con el atributo <code>type</code>. Algunos valores comunes
+                    son:</p>
+                <ul>
+                    <li><code>1</code>: Números (predeterminado).</li>
+                    <li><code>A</code>: Letras mayúsculas.</li>
+                    <li><code>a</code>: Letras minúsculas.</li>
+                    <li><code>I</code>: Números romanos en mayúsculas.</li>
+                    <li><code>i</code>: Números romanos en minúsculas.</li>
+                </ul>
+                <br>
+                <h4>Ejemplo de personalización:</h4>
+                <pre><code>&lt;ol type="A"&gt;
+    &lt;li&gt;Primera opción&lt;/li&gt;
+    &lt;li&gt;Segunda opción&lt;/li&gt;
+  &lt;/ol&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong> A. Primera opción, B. Segunda opción</p>
+                <br>
+                <h4>Atributo <code>start</code></h4>
+                <p>El atributo <code>start</code> se utiliza para indicar el número inicial de una lista ordenada. Por
+                    ejemplo, si deseas que la lista comience en el número 5, puedes usar <code>start="5"</code>.</p>
+                <br>
+                <h4>Ejemplo con el atributo <code>start</code>:</h4>
+                <pre><code>&lt;ol start="5"&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+  &lt;/ol&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong> 5. Elemento 1, 6. Elemento 2</p>
+            </section>
+
+            <section id="listas-definicion">
+                <h3>3. Listas de definición (<code>&lt;dl&gt;</code>)</h3>
+                <p>Las listas de definición son utilizadas para agrupar términos y sus descripciones. Se estructuran
+                    usando tres etiquetas:</p>
+                <ul>
+                    <li><code>&lt;dl&gt;</code>: Define la lista de definiciones.</li>
+                    <li><code>&lt;dt&gt;</code>: Define el término.</li>
+                    <li><code>&lt;dd&gt;</code>: Define la descripción del término.</li>
+                </ul>
+                <p>Este tipo de listas es ideal para diccionarios, glosarios o descripciones de términos y conceptos.
+                </p>
+                <br>
+                <h4>Estructura básica</h4>
+                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Lenguaje de marcado para crear páginas web.&lt;/dd&gt;
+        
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Lenguaje utilizado para estilizar documentos HTML.&lt;/dd&gt;
+        
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;Lenguaje de programación que añade interactividad a las páginas web.&lt;/dd&gt;
+  &lt;/dl&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Lenguaje de marcado para crear páginas web.</dd>
+                    <dt>CSS</dt>
+                    <dd>Lenguaje utilizado para estilizar documentos HTML.</dd>
+                    <dt>JavaScript</dt>
+                    <dd>Lenguaje de programación que añade interactividad a las páginas web.</dd>
+                </dl>
+            </section>
+
+            <section id="listas-anidadas">
+                <h3>Listas anidadas</h3>
+                <p>Es posible crear listas dentro de otras listas, lo que se conoce como listas anidadas. Esto es útil
+                    para organizar jerarquías de información.</p>
+                <br>
+                <h4>Ejemplo de listas anidadas:</h4>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Frutas
+    &lt;ul&gt;
+       &lt;li&gt;Manzana&lt;/li&gt;
+       &lt;li&gt;Banana&lt;/li&gt;
+       &lt;li&gt;Naranja&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Verduras
+     &lt;ol&gt;
+       &lt;li&gt;Zanahoria&lt;/li&gt;
+       &lt;li&gt;Brócoli&lt;/li&gt;
+     &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <ul>
+                    <li>Frutas
+                        <ul>
+                            <li>Manzana</li>
+                            <li>Banana</li>
+                            <li>Naranja</li>
+                        </ul>
+                    </li>
+                    <li>Verduras
+                        <ol>
+                            <li>Zanahoria</li>
+                            <li>Brócoli</li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section id="importancia-listas">
+            <h3>La Importancia de las Listas en HTML</h3>
+            <p>Las listas son una herramienta clave para la presentación clara de información en la web. Ayudan a mejorar la legibilidad y la estructura del contenido, facilitando tanto la navegación del usuario como el diseño de la página. A continuación, se detallan los aspectos más destacados de su importancia:</p>
+            <br>
+        
+            <h4>1. Mejora de la Legibilidad</h4>
+            <p>Las listas organizan la información de manera que se presente de forma lógica y estructurada. Esto permite a los usuarios escanear rápidamente el contenido y encontrar la información que buscan sin esfuerzo. Además, al utilizar listas, se evita el bloque de texto continuo que puede resultar abrumador, haciendo que la lectura sea más amena.</p>
+            <br>
+        
+            <h4>2. Facilitación de la Navegación</h4>
+            <p>Al resaltar puntos clave mediante listas, se permite a los usuarios comprender rápidamente los aspectos más importantes del contenido, lo que mejora la experiencia de navegación. Las listas son especialmente útiles para tecnologías de asistencia, ya que pueden anunciar la estructura del contenido.</p>
+            <br>
+        
+            <h4>3. Optimización del Diseño Web</h4>
+            <p>Las listas pueden ser estilizadas fácilmente utilizando CSS, lo que permite una presentación coherente en toda la página. Además, pueden integrarse de diversas maneras dentro del diseño de la página, facilitando la creatividad en la presentación de la información.</p>
+            <br>
+        
+            <h4>4. SEO y Estructuración del Contenido</h4>
+            <p>Los motores de búsqueda valoran el contenido bien estructurado. Las listas pueden ayudar a los motores de búsqueda a entender mejor el contenido de una página, lo que puede influir positivamente en su posicionamiento. También, al usar listas para destacar términos clave, se puede mejorar la relevancia del contenido.</p>
+            <br>
+        
+            <h4>5. Facilita la Comparación</h4>
+            <p>Las listas permiten a los usuarios comparar elementos de manera efectiva, como al enumerar características de diferentes productos, lo que les ayuda a tomar decisiones informadas.</p>
+            <br>
+        
+            <h4>6. Usos Comunes de las Listas en HTML</h4>
+            <p>Las listas son frecuentemente utilizadas en la creación de menús de navegación, en tutoriales para guiar a los usuarios a través de pasos, y para resumir información en listas de verificación.</p>
+            
+        
+            </section>
+        <a href="index.html" class="button-back">Volver al Menú</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+
+</body>
+
+</html>

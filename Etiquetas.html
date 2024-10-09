@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Etiquetas en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+
+    <main>
+        <section id="what-is-tag">
+            <h2>¿Qué es una etiqueta en HTML?</h2>
+            <p>Una etiqueta en HTML es un elemento que se utiliza para estructurar y organizar el contenido de una página
+                web. Las etiquetas son instrucciones que le indican al navegador cómo debe mostrar el contenido al
+                usuario. Cada etiqueta generalmente tiene un nombre, y se utiliza en pares: una etiqueta de apertura y una
+                etiqueta de cierre.</p>
+        </section>
+    
+        <section id="purpose-of-tags">
+            <h2>¿Para qué sirven las etiquetas en HTML?</h2>
+            <p>Las etiquetas en HTML son esenciales para definir la estructura y el formato del contenido en una página
+                web. Permiten organizar texto, imágenes, enlaces, formularios y otros elementos, facilitando la
+                navegación y la accesibilidad. Además, el uso correcto de etiquetas semánticas mejora el SEO (optimización
+                para motores de búsqueda) y la comprensión del contenido por parte de los lectores de pantalla.</p>
+        </section>
+        
+        <section id="text-tags">
+            <h2>Etiqueta &lt;h1&gt; a &lt;h6&gt;</h2>
+            <p>Estas etiquetas se utilizan para definir encabezados de diferentes niveles en el documento HTML.</p>
+            <p>El uso de encabezados ayuda a estructurar el contenido y mejora la accesibilidad, ya que los lectores de
+                pantalla utilizan estas etiquetas para navegar por el contenido.</p>
+            <p>Es importante usar estas etiquetas de manera jerárquica, comenzando con &lt;h1&gt; como el encabezado
+                principal y utilizando &lt;h2&gt;, &lt;h3&gt;, etc., para subtítulos y secciones subsecuentes.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;h1&gt; Encabezado principal &lt;/h1&gt;
+    &lt;h2&gt; Encabezado secundario &lt;/h2&gt;
+    &lt;h3&gt; Encabezado terciario &lt;/h3&gt;
+    &lt;h4&gt; Encabezado cuaternario &lt;/h4&gt;
+    &lt;h5&gt; Encabezado quinario &lt;/h5&gt;
+    &lt;h6&gt; Encabezado senario &lt;/h6&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="paragraph-tag">
+            <h2>Etiqueta &lt;p&gt;</h2>
+            <p>Esta etiqueta se utiliza para definir un párrafo en el texto. Los párrafos ayudan a agrupar oraciones
+                relacionadas y a facilitar la lectura.</p>
+            <p>Los navegadores suelen agregar un margen alrededor de los párrafos, lo que mejora la legibilidad.</p>
+            <p>Es recomendable no utilizar párrafos vacíos, ya que pueden afectar la presentación del contenido en
+                algunos navegadores.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;p&gt; Este es un párrafo &lt;/p&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="strong-tag">
+            <h2>Etiqueta &lt;strong&gt;</h2>
+            <p>Esta etiqueta se utiliza para resaltar texto en negrita, indicando que el contenido tiene un significado
+                importante. También ayuda en la accesibilidad al enfatizar contenido relevante.</p>
+            <p>El uso de &lt;strong&gt; puede también afectar el estilo visual, pero su objetivo principal es semántico.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;strong&gt; Texto en negrita &lt;/strong&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="em-tag">
+            <h2>Etiqueta &lt;em&gt;</h2>
+            <p>Esta etiqueta se utiliza para enfatizar texto, generalmente mostrado en cursiva. Su propósito es destacar
+                ciertas palabras o frases dentro de un contexto.</p>
+            <p>Al igual que &lt;strong&gt;, &lt;em&gt; también tiene un significado semántico, indicando que el
+                contenido es relevante en el contexto.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;em&gt; Texto en cursiva &lt;/em&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="anchor-tag">
+            <h2>Etiqueta &lt;a&gt;</h2>
+            <p>Esta etiqueta se utiliza para definir un enlace a otra página o recurso. Los enlaces son fundamentales
+                para la navegación en la web.</p>
+            <p>El atributo <code>target</code> se puede usar para especificar cómo se abrirá el enlace, por ejemplo, en
+                una nueva pestaña.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;a href="URL"&gt; Enlace &lt;/a&gt;</code></pre>
+            <p>El atributo <code>href</code> especifica la dirección a la que se dirige el enlace.</p>
+            <br>
+        </section>
+    
+        <section id="list-tags">
+            <h2>Etiqueta &lt;ul&gt;</h2>
+            <p>Se utiliza para crear una lista desordenada, donde los elementos se presentan con viñetas. Esta etiqueta
+                es útil para agrupar elementos que no requieren un orden específico.</p>
+            <p>Las listas pueden anidarse dentro de otras listas, creando jerarquías de información.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt; Elemento de lista 1 &lt;/li&gt;
+    &lt;li&gt; Elemento de lista 2 &lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="ordered-list-tag">
+            <h2>Etiqueta &lt;ol&gt;</h2>
+            <p>Se utiliza para crear una lista ordenada, donde los elementos se presentan con números. Es ideal para
+                mostrar secuencias o pasos en un proceso.</p>
+            <p>Las listas ordenadas también pueden anidarse para crear sub-listas.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt; Elemento de lista numerada 1 &lt;/li&gt;
+    &lt;li&gt; Elemento de lista numerada 2 &lt;/li&gt;
+    &lt;/ol&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="list-item-tag">
+            <h2>Etiqueta &lt;li&gt;</h2>
+            <p>Se utiliza para definir un elemento dentro de una lista, ya sea desordenada u ordenada. Los elementos de
+                lista mejoran la claridad y la organización de la información.</p>
+            <p>Los elementos de lista deben estar contenidos dentro de etiquetas &lt;ul&gt; o &lt;ol&gt;.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;li&gt; Elemento de lista &lt;/li&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="image-tag">
+            <h2>Etiqueta &lt;img&gt;</h2>
+            <p>Esta etiqueta se utiliza para insertar una imagen en la página. La inclusión de imágenes en el contenido
+                web puede enriquecer la experiencia del usuario.</p>
+            <p>Es importante usar el atributo <code>alt</code> para describir la imagen, lo cual es crucial para la
+                accesibilidad y SEO.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;img src="URL" alt="Descripción"&gt;</code></pre>
+            <p>El atributo <code>alt</code> proporciona una descripción de la imagen, lo cual es importante para la
+                accesibilidad y en caso de que la imagen no se cargue.</p>
+            <br>
+        </section>
+    
+        <section id="video-tag">
+            <h2>Etiqueta &lt;video&gt;</h2>
+            <p>Se utiliza para insertar un video en la página. Esta etiqueta permite una variedad de atributos que
+                controlan la reproducción y visualización del video.</p>
+            <p>Se pueden incluir múltiples fuentes de video para asegurar la compatibilidad con diferentes navegadores.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code></pre>
+            <p>El atributo <code>controls</code> permite mostrar los controles de reproducción, como play, pause y
+                volumen.</p>
+            <br>
+        </section>
+    
+        <section id="audio-tag">
+            <h2>Etiqueta &lt;audio&gt;</h2>
+            <p>Se utiliza para insertar un archivo de audio en la página. Similar a la etiqueta de video, permite a los
+                usuarios reproducir sonido directamente en su navegador.</p>
+            <p>Es posible incluir múltiples formatos de audio para mejorar la compatibilidad entre navegadores.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+            <p>El atributo <code>controls</code> muestra controles para la reproducción del audio.</p>
+            <br>
+        </section>
+    
+        <section id="form-tag">
+            <h2>Etiqueta &lt;form&gt;</h2>
+            <p>Se utiliza para crear un formulario que permite a los usuarios enviar datos. Los formularios son
+                esenciales para la interacción del usuario en aplicaciones web.</p>
+            <p>El uso de etiquetas <code>&lt;label&gt;</code> junto con <code>&lt;input&gt;</code> mejora la
+                accesibilidad y la usabilidad del formulario.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;form action="URL" method="POST"&gt;
+    &lt;input type="text" placeholder="Nombre"&gt;
+    &lt;textarea&gt; Escribe aquí... &lt;/textarea&gt;
+    &lt;button&gt; Enviar &lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="input-tag">
+            <h2>Etiqueta &lt;input&gt;</h2>
+            <p>Se utiliza para crear campos de entrada en un formulario. Esta etiqueta es versátil y permite varios
+                tipos de entrada, como texto, contraseñas, correos electrónicos, etc.</p>
+            <p>Es esencial utilizar el atributo <code>type</code> para definir el tipo de entrada esperada.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;input type="text" placeholder="Ingrese texto"&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="button-tag">
+            <h2>Etiqueta &lt;button&gt;</h2>
+            <p>Se utiliza para crear un botón en el formulario. Los botones pueden ser utilizados para enviar el
+                formulario o para ejecutar acciones específicas mediante JavaScript.</p>
+            <p>El atributo <code>type</code> se puede establecer como <code>submit</code>, <code>reset</code> o
+                <code>button</code>, dependiendo de la funcionalidad deseada.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;button type="submit"&gt; Enviar &lt;/button&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="select-tag">
+            <h2>Etiqueta &lt;select&gt;</h2>
+            <p>Se utiliza para crear un menú desplegable en un formulario. Permite a los usuarios seleccionar una
+                opción de una lista predefinida.</p>
+            <p>El uso de etiquetas <code>&lt;option&gt;</code> permite definir las opciones disponibles en el menú.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;select&gt;
+    &lt;option value="1"&gt; Opción 1 &lt;/option&gt;
+    &lt;option value="2"&gt; Opción 2 &lt;/option&gt;
+    &lt;/select&gt;</code></pre>
+            <br>
+        </section>
+    
+        <section id="checkbox-tag">
+            <h2>Etiqueta &lt;input type="checkbox"&gt;</h2>
+            <p>Se utiliza para crear una casilla de verificación en el formulario. Los usuarios pueden seleccionar una o
+                más opciones.</p>
+            <p>El uso de casillas de verificación es común en formularios donde se requiere elegir múltiples
+                opciones.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;input type="checkbox" name="opcion1"&gt; Opción 1</code></pre>
+            <br>
+        </section>
+    
+        <section id="radio-tag">
+            <h2>Etiqueta &lt;input type="radio"&gt;</h2>
+            <p>Se utiliza para crear un botón de opción en el formulario. Los botones de opción permiten seleccionar una
+                sola opción de un conjunto de opciones.</p>
+            <p>Es importante agrupar los botones de opción utilizando el mismo atributo <code>name</code> para
+                asegurar que solo una opción esté seleccionada a la vez.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;input type="radio" name="grupo1"&gt; Opción 1</code></pre>
+            <br>
+        </section>
+    
+        <section id="textarea-tag">
+            <h2>Etiqueta &lt;textarea&gt;</h2>
+            <p>Se utiliza para crear un campo de texto de varias líneas en un formulario. Permite a los usuarios
+                ingresar texto extenso.</p>
+            <p>El uso de esta etiqueta es útil cuando se requiere más espacio para la entrada de texto, como en
+                comentarios o descripciones.</p>
+    
+            <h3>Uso</h3>
+            <pre><code>&lt;textarea placeholder="Escribe aquí..."&gt;&lt;/textarea&gt;</code></pre>
+            
+        </section>
+        <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+    
+</body>
+
+</html>

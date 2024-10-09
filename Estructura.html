@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Estructura de un documento HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+
+
+    <main>
+
+        <section id="estructura">
+            <h2>Estructura Fundamental de un Documento HTML</h2>
+            <p>Todo documento HTML sigue una estructura básica que es esencial para que el navegador entienda y presente la información correctamente. Esta estructura, conocida como "esqueleto", permite que los elementos se organicen de manera efectiva y asegura una correcta interpretación del contenido por parte de los navegadores.</p>
+        </section>
+    
+        <section id="estructura-minima">
+            <h2>Estructura Mínima de un Documento HTML</h2>
+            <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Título de la Página&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;¡Hola, mundo!&lt;/h1&gt;
+        &lt;p&gt;Este es un documento HTML básico.&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+            </code></pre>
+            <p>Esta estructura mínima establece el punto de partida para cualquier documento HTML, asegurando que sea compatible con los navegadores modernos.</p>
+        </section>
+    
+        <section id="componentes">
+            <h2>Componentes de un Documento HTML</h2>
+            
+            <section id="componente-doctype">
+                <h3>&lt;!DOCTYPE html&gt;</h3>
+                <p>Esta declaración es crucial porque informa al navegador que se trata de un documento HTML5. Sin ella, el navegador podría no interpretar correctamente el documento, lo que podría resultar en un diseño defectuoso o en la pérdida de funcionalidad. Es la primera línea del archivo y no es una etiqueta HTML propiamente dicha, sino una directiva.</p>
+            </section>
+    
+            <section id="componente-html">
+                <h3>&lt;html lang="es"&gt;</h3>
+                <p>La etiqueta &lt;html&gt; actúa como el contenedor raíz de toda la página. El atributo <code>lang="es"</code> especifica que el contenido está en español, lo cual es relevante para lectores de pantalla y motores de búsqueda, ayudando a mejorar la accesibilidad y el SEO.</p>
+            </section>
+    
+            <section id="componente-head">
+                <h3>&lt;head&gt;</h3>
+                <p>La sección &lt;head&gt; alberga metadatos sobre el documento, que son datos que describen otros datos. Incluye el título, enlaces a hojas de estilo CSS, scripts de JavaScript y otros elementos que no son visibles en la página. Esta sección es esencial para la configuración y el comportamiento del documento.</p>
+            </section>
+    
+            <section id="componente-meta-charset">
+                <h3>&lt;meta charset="UTF-8"&gt;</h3>
+                <p>Esta etiqueta establece el conjunto de caracteres para el documento, con <code>UTF-8</code> siendo el más común. Esto asegura que se muestren correctamente caracteres especiales, acentos y símbolos, evitando problemas de codificación que pueden afectar la legibilidad del contenido.</p>
+            </section>
+    
+            <section id="componente-meta-viewport">
+                <h3>&lt;meta name="viewport"&gt;</h3>
+                <p>Fundamental para el diseño responsivo, esta etiqueta permite que la página se ajuste adecuadamente a diferentes tamaños de pantalla. <code>content="width=device-width, initial-scale=1.0"</code> indica que el ancho de la página debe ser igual al ancho del dispositivo y que la escala inicial debe ser 1:1, lo que mejora la experiencia del usuario en dispositivos móviles.</p>
+            </section>
+    
+            <section id="componente-title">
+                <h3>&lt;title&gt;</h3>
+                <p>El título de la página, definido dentro de esta etiqueta, se muestra en la pestaña del navegador y es utilizado por los motores de búsqueda para identificar el contenido de la página. Un título bien redactado es clave para el SEO, ya que puede influir en las tasas de clics en los resultados de búsqueda.</p>
+            </section>
+    
+            <section id="componente-body">
+                <h3>&lt;body&gt;</h3>
+                <p>La etiqueta &lt;body&gt; contiene todo el contenido visible de la página, incluyendo texto, imágenes, enlaces, y otros elementos multimedia. Es donde se desarrolla la experiencia del usuario, y todo lo que aparece en la ventana del navegador se encuentra aquí. En el ejemplo, se incluyen un encabezado <code>&lt;h1&gt;</code> y un párrafo <code>&lt;p&gt;</code>, que son elementos básicos pero fundamentales para estructurar el contenido.</p>
+            </section>
+    
+        </section>
+    
+        <section id="importancia">
+            <h2>La Importancia de Seguir Esta Estructura</h2>
+            <p>Seguir esta estructura estándar es crucial por varias razones:</p>
+            <ul>
+                <li><strong>Compatibilidad:</strong> Asegura que los navegadores interpreten correctamente el contenido, lo que resulta en un diseño consistente en diferentes plataformas y dispositivos.</li>
+                <li><strong>Accesibilidad:</strong> Mejora la experiencia de los usuarios que dependen de tecnologías de asistencia, como lectores de pantalla, permitiéndoles entender y navegar por el contenido con facilidad.</li>
+                <li><strong>SEO:</strong> Los motores de búsqueda utilizan esta estructura para indexar la página correctamente, lo que impacta en su visibilidad en los resultados de búsqueda.</li>
+                <li><strong>Mantenimiento:</strong> Facilita la lectura y el mantenimiento del código, lo que permite a los desarrolladores realizar modificaciones y actualizaciones de manera más eficiente.</li>
+                <li><strong>Adaptabilidad:</strong> Ayuda a crear diseños responsivos, asegurando una buena experiencia de usuario en dispositivos móviles y tablets.</li>
+            </ul>
+            <p>En resumen, esta estructura no solo es la base de cualquier documento HTML, sino que también asegura que la página sea efectiva y accesible para todos los usuarios.</p>
+        </section>
+    
+        
+        <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+    
+</body>
+
+</html>

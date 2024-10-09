@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <link rel="icon" href="html.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Multimedia en HTML</h1>
+    </header>
+
+    <!-- Barra de navegación vertical -->
+    <nav class="vertical">
+        <a href="index.html">
+            <img src="home.png" alt="Inicio">
+        </a>
+        <a href="Introduccion.html">Introducción</a>
+        <a href="Estructura.html">Estructura</a>
+        <a href="Etiquetas.html">Etiquetas</a>
+        <a href="Atributos.html">Atributos</a>
+        <a href="Listas.html">Listas</a>
+        <a href="Tablas.html">Tablas</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Multimedia.html">Multimedia</a>
+        <a href="Enlaces.html">Enlaces</a>
+        <a href="Semantica.html">Semántica</a>
+        <a href="Errores.html">Errores comunes</a>
+        <a href="Practicas.html">Buenas prácticas</a>
+    </nav>
+    <main>
+        <section id="multimedia-html">
+            <h2>Multimedia en HTML: Imágenes, Videos y Audio</h2>
+        </section>
+
+            <section id="que-es-multimedia">
+                <h3>Multimedia en HTML</h3>
+                <p>La multimedia se refiere a la integración de diferentes tipos de contenido, como texto, imágenes,
+                    audio y video, en un documento web. HTML ofrece varias etiquetas y métodos para insertar y
+                    manipular estos elementos, lo que permite a los desarrolladores crear experiencias más ricas y
+                    dinámicas para los usuarios. Esta integración es crucial para la comunicación efectiva y la
+                    interacción en la web moderna.</p>
+            </section>
+
+            <section id="imagenes-html">
+                <h3>Imágenes en HTML</h3>
+                <p>Las imágenes son un componente clave en la web, ya que pueden mejorar la apariencia de un sitio y
+                    proporcionar información visual adicional. Para insertar imágenes en HTML, se utiliza la
+                    etiqueta <code>&lt;img&gt;</code>, que es esencial para el diseño visual de cualquier página
+                    web.</p>
+
+                <h4>Uso de la etiqueta <code>&lt;img&gt;</code></h4>
+                <p>La etiqueta <code>&lt;img&gt;</code> tiene varios atributos importantes:</p>
+                <ul>
+                    <li><strong>src</strong>: La URL o la ruta del archivo de la imagen.</li>
+                    <li><strong>alt</strong>: Texto alternativo que describe la imagen, esencial para la
+                        accesibilidad y SEO.</li>
+                    <li><strong>width</strong> y <strong>height</strong>: Establecen el tamaño de la imagen,
+                        ayudando a optimizar el rendimiento de carga.</li>
+                    <li><strong>title</strong>: Información adicional sobre la imagen que aparece como un tooltip al
+                        pasar el ratón.</li>
+                </ul>
+                <p><strong>Ejemplo:</strong></p>
+                <pre><code>&lt;img src="https://billboardphilippines.com/wp-content/uploads/2024/01/Yes-and-FTR-IMG-1-1600x838.jpg"
+                        alt="Ariana Grande" width="300">&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <img src="https://billboardphilippines.com/wp-content/uploads/2024/01/Yes-and-FTR-IMG-1-1600x838.jpg"
+                    alt="Ariana Grande" width="800">
+                <br>
+            </section>
+
+            <section id="videos-html">
+                <h3>Videos en HTML</h3>
+                <p>Los videos son otra forma popular de contenido multimedia que se puede incrustar en una página
+                    web. HTML5 introduce la etiqueta <code>&lt;video&gt;</code> para facilitar la inserción y
+                    reproducción de videos, permitiendo a los desarrolladores ofrecer contenido audiovisual de forma
+                    sencilla y efectiva.</p>
+
+                <h4>Uso de la etiqueta <code>&lt;video&gt;</code></h4>
+                <p>Los atributos más comunes de la etiqueta <code>&lt;video&gt;</code> son:</p>
+                <ul>
+                    <li><strong>src</strong>: La URL del archivo de video.</li>
+                    <li><strong>controls</strong>: Agrega controles de reproducción (play, pause, etc.).</li>
+                    <li><strong>autoplay</strong>: Reproduce el video automáticamente al cargar la página.</li>
+                    <li><strong>loop</strong>: Repite el video al final.</li>
+                    <li><strong>muted</strong>: Silencia el video al inicio, comúnmente utilizado con
+                        <code>autoplay</code>.
+                    </li>
+                </ul>
+                <p><strong>Ejemplo:</strong></p>
+                <pre><code>&lt;video width="600" controls&gt;
+          &lt;source src="ruta/a/video.mp4" type="video/mp4"&gt;
+        &lt;/video&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <video width="800" controls>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <br>
+                <br>
+                <h4>Soporte de formatos de video</h4>
+                <p>Es importante considerar la compatibilidad de los formatos de video. Los formatos más comunes son
+                    MP4, WebM y Ogg. A menudo, es recomendable proporcionar múltiples fuentes para asegurar que el
+                    video se reproduzca en todos los navegadores.</p>
+                <br>
+                <p><strong>Ejemplo de múltiples fuentes:</strong></p>
+                <pre><code>&lt;video width="800" controls&gt;
+          &lt;source src="ruta/a/video.mp4" type="video/mp4"&gt;
+          &lt;source src="ruta/a/video.webm" type="video/webm"&gt;
+          Tu navegador no soporta la etiqueta de video.
+        &lt;/video&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <video width="800" controls>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                
+            </section>
+
+            <section id="audio-html">
+                <h3>Audio en HTML</h3>
+                <p>HTML5 también permite la integración de audio mediante la etiqueta <code>&lt;audio&gt;</code>.
+                    Esto facilita la reproducción de archivos de audio en una página web y es especialmente útil
+                    para música, podcasts y narraciones.</p>
+
+                <h4>Uso de la etiqueta <code>&lt;audio&gt;</code></h4>
+                <p>Los atributos más comunes de la etiqueta <code>&lt;audio&gt;</code> son:</p>
+                <ul>
+                    <li><strong>src</strong>: La URL del archivo de audio.</li>
+                    <li><strong>controls</strong>: Agrega controles de reproducción.</li>
+                    <li><strong>autoplay</strong>: Reproduce el audio automáticamente.</li>
+                    <li><strong>loop</strong>: Repite el audio al finalizar.</li>
+                    <li><strong>preload</strong>: Indica al navegador si debe cargar el audio al iniciar la página
+                        (valores: none, metadata, auto).</li>
+                </ul>
+                <p><strong>Ejemplo:</strong></p>
+                <pre><code>&lt;audio controls&gt;
+          &lt;source src="ruta/a/audio.mp3" type="audio/mpeg"&gt;
+          Tu navegador no soporta la etiqueta de audio.
+        &lt;/audio&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                </audio>
+                <br>
+                <br>
+
+                <h4>Soporte de formatos de audio</h4>
+                <p>Los formatos de audio más comunes incluyen MP3, WAV y Ogg. Al igual que con los videos, es
+                    recomendable proporcionar múltiples fuentes para maximizar la compatibilidad con diferentes
+                    navegadores.</p>
+                <br>
+                <p><strong>Ejemplo de múltiples fuentes de audio:</strong></p>
+                <pre><code>&lt;audio controls&gt;
+          &lt;source src="ruta/a/audio.mp3" type="audio/mpeg"&gt;
+          &lt;source src="ruta/a/audio.ogg" type="audio/ogg"&gt;
+          Tu navegador no soporta la etiqueta de audio.
+        &lt;/audio&gt;</code></pre>
+                <br>
+                <p><strong>Salida:</strong></p>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                </audio>
+                <audio controls>
+                    <source src="audio2.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+
+            <section id="accesibilidad-multimedia">
+                <h3>Accesibilidad en multimedia</h3>
+                <p>La accesibilidad es un aspecto crítico al trabajar con contenido multimedia. Aquí hay algunas
+                    recomendaciones para garantizar que todos los usuarios, independientemente de sus habilidades,
+                    puedan acceder al contenido:</p>
+                <ul>
+                    <li><strong>Texto alternativo para imágenes</strong>: Siempre proporciona un atributo alt
+                        descriptivo para imágenes, lo que ayuda a los usuarios con discapacidades visuales que
+                        utilizan lectores de pantalla.</li>
+                    <li><strong>Subtítulos y transcripciones</strong>: Para videos y audios, considera agregar
+                        subtítulos o transcripciones que ayuden a las personas con discapacidades auditivas.</li>
+                    <li><strong>Controles claros</strong>: Asegúrate de que los controles de reproducción sean
+                        accesibles y fáciles de usar para todos los usuarios, utilizando etiquetas y descripciones
+                        adecuadas.</li>
+                    <li><strong>Contraste y legibilidad</strong>: Asegúrate de que el contenido multimedia tenga un
+                        buen contraste de color y sea legible para usuarios con discapacidades visuales.</li>
+                    <li><strong>Diseño responsive</strong>: Asegúrate de que el contenido multimedia se adapte a
+                        diferentes tamaños de pantalla y dispositivos, mejorando la accesibilidad para todos.</li>
+                </ul>
+            </section>
+
+
+        <section id="importancias">
+        <p>La integración de multimedia en HTML es fundamental para crear sitios web atractivos y dinámicos. A través de
+            imágenes, videos y audio, puedes enriquecer la experiencia del usuario y proporcionar contenido valioso. Al
+            seguir las mejores prácticas de accesibilidad, garantizarás que todos los usuarios puedan disfrutar de tu
+            contenido multimedia.</p>
+        </section>
+        
+        <a href="index.html" class="button-back">Volver al Menú</a>
+
+    </main>
+
+
+
+    <footer>
+        <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
+    </footer>
+
+   
+</body>
+
+</html>
