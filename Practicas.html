@@ -4,16 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buenas prácticas</title>
+    <title>CSS</title>
     <link rel="icon" href="html.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
+        nav.vertical {
+            background-color: #00425a;
+            color: white;
+            padding: 15px;
+            width: 200px;
+            position: fixed;
+            height: 100%;
+        }
+
+        nav.vertical a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        nav.vertical a:hover {
+            background-color: #006064;
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .button-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00425a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button-back:hover {
+            background-color: #006064;
+        }
+
+        .example {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+        }
+
+        .flexbox-example {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .grid-example {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .grid-example div {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #00425a;
+            color: white;
+            text-align: center;
+        }
+
+        h2, h3, h4 {
+            color: #00425a;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Buenas prácticas en HTML</h1>
+        <h1>CSS (Hojas de estilo)</h1>
     </header>
 
     <!-- Barra de navegación vertical -->
@@ -32,173 +120,111 @@
         <a href="Enlaces.html">Enlaces</a>
         <a href="Semantica.html">Semántica</a>
         <a href="Errores.html">Errores comunes</a>
-        <a href="Practicas.html">Buenas prácticas</a>
+        <a href="CSS.html">CSS</a>
     </nav>
 
     <main>
-        <section id="buenas-practicas-html">
-            <h2>Buenas Prácticas en HTML: Consejos para un Código Limpio y Eficiente</h2>
+        <section id="introduccion-css">
+            <h2>CSS: Hojas de Estilo en Cascada</h2>
 
+            <h3>¿Qué es CSS?</h3>
+            <p>Cascading Style Sheets (CSS) es un lenguaje de diseño utilizado para describir la presentación de un documento escrito en HTML o XML. CSS permite a los desarrolladores y diseñadores web controlar el diseño, el formato y la apariencia de los elementos en una página web de manera eficiente.</p>
            
-                <h3>¿Por qué son importantes las buenas prácticas en HTML?</h3>
-                <p>Adoptar buenas prácticas en HTML es esencial para crear sitios web accesibles, optimizados y fáciles
-                    de mantener. Un código limpio y estructurado no solo mejora la experiencia del usuario, sino que
-                    también facilita la colaboración con otros desarrolladores y el proceso de mantenimiento a largo
-                    plazo. Implementar buenas prácticas ayuda a prevenir errores, optimizar el rendimiento y asegurar
-                    que tu sitio cumpla con los estándares de la web.</p>
+            <h3>¿Para qué sirve CSS?</h3>
+            <p>CSS se utiliza para:</p>
+            <ul>
+                <li>Separar el contenido de la presentación, facilitando la mantenibilidad del código.</li>
+                <li>Definir estilos para diferentes elementos HTML, como colores, fuentes, márgenes y posiciones.</li>
+                <li>Crear diseños responsivos que se adaptan a diferentes dispositivos y tamaños de pantalla.</li>
+                <li>Aplicar efectos visuales como sombras, transiciones y animaciones.</li>
+            </ul>
+
+            <h3>¿Cómo se usa CSS?</h3>
+            <p>CSS se puede utilizar de tres maneras:</p>
+            <ol>
+                <li>
+                    <h4>CSS en línea</h4>
+                    <p>Se aplica directamente en el elemento HTML utilizando el atributo <code>style</code>.</p>
+                    <pre><code>&lt;p style="color: blue; font-size: 20px;"&gt;Este es un párrafo azul.&lt;/p&gt;</code></pre>
+                </li>
+                <li>
+                    <h4>CSS interno</h4>
+                    <p>Se incluye en la sección <code>&lt;head&gt;</code> del documento HTML usando una etiqueta <code>&lt;style&gt;</code>.</p>
+                    <pre><code>&lt;style&gt;
+    p {
+        color: green;
+        font-size: 18px;
+    }
+&lt;/style&gt;</code></pre>
+                </li>
+                <li>
+                    <h4>CSS externo</h4>
+                    <p>Se guarda en un archivo separado con extensión <code>.css</code> y se vincula al documento HTML usando una etiqueta <code>&lt;link&gt;</code>.</p>
+                    <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+                </li>
+            </ol>
+
+            <h3>Ejemplos de CSS</h3>
+            <h4>Establecer colores y fuentes</h4>
+            <pre><code>body {
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+}</code></pre>
+            <div class="example">
+                <h1>Este es un encabezado</h1>
+                <p>Este párrafo tiene un fondo claro y texto oscuro.</p>
+            </div>
+
+            <h4>Crear un diseño responsivo</h4>
+            <pre><code>@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}</code></pre>
+            <div class="example">
+                <h3>Este texto cambia de tamaño en dispositivos pequeños</h3>
+                <p>Reduce el tamaño de la fuente cuando el ancho de la pantalla es menor a 600px.</p>
+            </div>
+
+            <h3>Ejemplo de Flexbox</h3>
+            <div class="flexbox-example">
+                <div style="flex: 1; padding: 10px; background-color: #ffcc00;">Elemento 1</div>
+                <div style="flex: 1; padding: 10px; background-color: #ff6600;">Elemento 2</div>
+                <div style="flex: 1; padding: 10px; background-color: #ff3300;">Elemento 3</div>
+            </div>
+            <p>Este es un ejemplo de Flexbox donde los elementos se distribuyen uniformemente en la fila.</p>
+           
+
+            <h3>Ejemplo de Grid</h3>
+            <div class="grid-example">
+                <div style="background-color: #00ccff;">1</div>
+                <div style="background-color: #00ff99;">2</div>
+                <div style="background-color: #00ffcc;">3</div>
+                <div style="background-color: #ff00cc;">4</div>
+                <div style="background-color: #cc00ff;">5</div>
+                <div style="background-color: #ffcc00;">6</div>
+            </div>
+            <p>Este es un ejemplo de Grid donde se organizan elementos en una cuadrícula de 3 columnas.</p>
             
-       
 
-            <section id="consejos-practicas">
-                <h3>Consejos para un Código Limpio y Eficiente</h3>
-                <ol>
-                    <li>
-                        <h4>Estructura semántica</h4>
-                        <p>Utiliza etiquetas semánticas para dar significado al contenido de tu página. Esto no solo
-                            ayuda a los motores de búsqueda y a las tecnologías asistivas, sino que también mejora la
-                            legibilidad del código.</p>
-                        <br>
-                        <p><strong>Ejemplo:</strong></p>
-                        <pre><code>&lt;header&gt;
-    &lt;h1&gt;Título del sitio&lt;/h1&gt;
-  &lt;/header&gt;</code></pre>
-                    </li>
-                    <br>
-                    <li>
-                        <h4>Asegúrate de que tu código sea válido</h4>
-                        <p>Utiliza herramientas de validación de HTML para verificar que tu código cumpla con los
-                            estándares. Esto ayuda a prevenir errores y garantiza que tu sitio funcione correctamente en
-                            diferentes navegadores.</p>
-                        <br>
-                        <p><strong>Herramienta recomendada:</strong> W3C Markup Validation Service</p>
-                        <br>
-                    </li>
+            <h3>Características avanzadas de CSS</h3>
+            <ul>
+                <li><strong>Flexbox:</strong> Un modelo de diseño que permite crear estructuras de página flexibles y adaptativas.</li>
+                <li><strong>Grid:</strong> Un sistema de cuadrícula que facilita la creación de diseños complejos de manera intuitiva.</li>
+                <li><strong>Animaciones y Transiciones:</strong> Permiten aplicar efectos de movimiento a los elementos cuando cambian de estado.</li>
+            </ul>
 
-                    <li>
-                        <h4>Utiliza atributos <code>alt</code> para imágenes</h4>
-                        <p>Siempre proporciona un texto alternativo en el atributo <code>alt</code> de las imágenes.
-                            Esto es fundamental para la accesibilidad y ayuda a los motores de búsqueda a comprender el
-                            contenido visual.</p>
-                        <br>
-                        <p><strong>Ejemplo:</strong></p>
-                        <pre><code>&lt;img src="ruta/a/imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Organiza tu código</h4>
-                        <p>Mantén una estructura organizada y coherente en tu código. Usa la indentación para facilitar
-                            la lectura y el mantenimiento. Agrupa etiquetas relacionadas y utiliza comentarios para
-                            explicar secciones complejas.</p>
-                        <br>
-                        <p><strong>Ejemplo:</strong></p>
-                        <pre><code>&lt;!-- Cabecera del sitio --&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Título del Sitio&lt;/h1&gt;
-      &lt;/header&gt;
-        
-    &lt;!-- Contenido principal --&gt;
-    &lt;main&gt;
-      &lt;section&gt;
-        &lt;h2&gt;Título de la Sección&lt;/h2&gt;
-      &lt;/section&gt;
-    &lt;/main&gt;</code></pre>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Usa enlaces significativos</h4>
-                        <p>Asegúrate de que los textos de los enlaces sean descriptivos y relevantes. Esto mejora la
-                            accesibilidad y la experiencia del usuario.</p>
-                        <br>
-                        <p><strong>Ejemplo:</strong></p>
-                        <pre><code>&lt;a href="https://example.com"&gt;Visita nuestro sitio para más información sobre nuestros servicios&lt;/a&gt;</code></pre>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Mantén la compatibilidad con navegadores</h4>
-                        <p>Prueba tu sitio en diferentes navegadores y dispositivos para asegurarte de que se vea y
-                            funcione correctamente en todos ellos. Usa herramientas de pruebas cruzadas como
-                            BrowserStack o Sauce Labs.</p>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Optimiza el uso de etiquetas de encabezado</h4>
-                        <p>Utiliza etiquetas de encabezado de manera jerárquica y lógica (<code>&lt;h1&gt;</code>,
-                            <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc.) para estructurar el contenido de tu
-                            página. Esto no solo ayuda a la SEO, sino que también mejora la accesibilidad.
-                        </p>
-                        <br>
-                        <p><strong>Ejemplo:</strong></p>
-                        <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
-  &lt;h2&gt;Subtítulo&lt;/h2&gt;
-    &lt;h3&gt;Detalles&lt;/h3&gt;</code></pre>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Mantén los formularios accesibles</h4>
-                        <p>Asegúrate de que los formularios sean accesibles al usar etiquetas <code>&lt;label&gt;</code>
-                            correctamente asociadas a los campos de entrada. Esto mejora la usabilidad y la
-                            accesibilidad.</p>
-                        <br>
-                        <p><strong>Ejemplo:</strong></p>
-                        <pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
-  &lt;input type="text" id="nombre" name="nombre"&gt;</code></pre>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Carga eficiente de recursos</h4>
-                        <p>Minimiza el tamaño de los archivos HTML, CSS y JavaScript. Utiliza compresión y optimización
-                            de imágenes para mejorar los tiempos de carga del sitio. Considera usar técnicas de carga
-                            diferida (lazy loading) para imágenes y videos, lo que mejora la experiencia del usuario al
-                            reducir los tiempos de espera.</p>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Documenta tu código</h4>
-                        <p>Incluye comentarios que expliquen secciones importantes o decisiones de diseño en tu código.
-                            Esto es útil para ti y para otros desarrolladores que trabajen en el proyecto.</p>
-                        <br>
-                        <p><strong>Ejemplo:</strong></p>
-                        <pre><code>&lt;!-- Este es el formulario de contacto --&gt;
-  &lt;form action="enviar.php" method="post"&gt;
-    &lt;!-- Campo para el nombre del usuario --&gt;
-    &lt;input type="text" name="nombre" required&gt;
-  &lt;/form&gt;</code></pre>
-                        <br>
-                    </li>
-
-                    <li>
-                        <h4>Valida y prueba tu sitio</h4>
-                        <p>Realiza pruebas regulares en tu sitio web para identificar y corregir errores. Utiliza
-                            herramientas de auditoría como Google Lighthouse para obtener recomendaciones sobre el
-                            rendimiento, la accesibilidad y las mejores prácticas. También es útil realizar pruebas de
-                            usabilidad para asegurarte de que tu sitio cumpla con las expectativas de los usuarios.</p>
-                    </li>
-                </ol>
-            </section>
-        
-        <p>Seguir buenas prácticas en HTML es fundamental para crear sitios web efectivos, accesibles y fáciles de
-            mantener. Al adoptar un enfoque estructurado y consciente en la codificación, no solo mejorarás la
-            experiencia del usuario, sino que también facilitarás el trabajo en equipo y el mantenimiento a largo plazo
-            de tu proyecto web.</p>
-        
-    </section>
-    <a href="index.html" class="button-back">Volver al Menú</a>
-
+            <a href="index.html" class="button-back">Volver al inicio</a>
+        </section>
     </main>
-
 
     <footer>
         <p>&copy; 2024 Aprende HTML con Cristian y Dani</p>
     </footer>
-
-    
 </body>
 
 </html>
